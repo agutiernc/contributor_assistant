@@ -1,0 +1,8 @@
+markdown
+beautifulsoup4
+tqdm
+notebook==7.1.2  
+elasticsearch
+pandas
+scikit-learn
+ipywidgets

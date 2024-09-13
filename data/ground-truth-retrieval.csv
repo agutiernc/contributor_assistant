@@ -1,0 +1,243 @@
+id,question
+3ba4d080-97a6-4954-829e-121e008c43e9,How do I request access to the Hack for LA website GitHub repository?
+3ba4d080-97a6-4954-829e-121e008c43e9,What steps should I take after accepting the GitHub invite for the Hack for LA repository?
+3ba4d080-97a6-4954-829e-121e008c43e9,Where can I find instructions on making my Hack for LA GitHub organization membership public?
+3ba4d080-97a6-4954-829e-121e008c43e9,"Is two-factor authentication required for contributing to the Hack for LA project, and if so, how do I set it up?"
+3ba4d080-97a6-4954-829e-121e008c43e9,What information should I include in my introductory message to the hfla-site Slack channel?
+b3c6a636-faff-4353-b429-4175bda0a22e,"What are the installation options for Git on a Mac, and how much space do they require?"
+b3c6a636-faff-4353-b429-4175bda0a22e,Is there a way to install Git on a Mac that uses less storage space?
+b3c6a636-faff-4353-b429-4175bda0a22e,Where can I find instructions for installing Git on different operating systems?
+b3c6a636-faff-4353-b429-4175bda0a22e,What's the recommended Git installation method for participating in Hack for LA projects?
+b3c6a636-faff-4353-b429-4175bda0a22e,"How can I install Git using Homebrew, and what are the space requirements for this method?"
+cd95b82f-577c-4785-a6c9-506f830d8876,How do I create a copy of the Hack for LA website repository on my GitHub account?
+cd95b82f-577c-4785-a6c9-506f830d8876,What is the purpose of forking a repository and how does it relate to contributing?
+cd95b82f-577c-4785-a6c9-506f830d8876,Can you explain the steps to fork the Hack for LA website repository?
+cd95b82f-577c-4785-a6c9-506f830d8876,"After forking, what should the URL of my forked repository look like?"
+cd95b82f-577c-4785-a6c9-506f830d8876,Is the forked repository automatically available on my local machine after forking on GitHub?
+30f244ee-b626-47b8-8775-9b1f539487ad,What prerequisite software do I need to install before cloning a repository to my local machine?
+30f244ee-b626-47b8-8775-9b1f539487ad,Can you explain the process of creating a local copy of a forked repository on my computer?
+30f244ee-b626-47b8-8775-9b1f539487ad,Where can I find instructions for installing Git on different operating systems?
+ac8e0f36-ea98-4ce0-badc-4b1195f83651,How do I create a new folder for Hack for LA projects on my computer?
+ac8e0f36-ea98-4ce0-badc-4b1195f83651,What's the correct command to clone the Hack for LA website repository?
+ac8e0f36-ea98-4ce0-badc-4b1195f83651,"After cloning the repository, how can I verify that the 'website' folder was created successfully?"
+ac8e0f36-ea98-4ce0-badc-4b1195f83651,Can you explain the process of navigating to the newly created 'website' directory using the command line?
+ac8e0f36-ea98-4ce0-badc-4b1195f83651,Is it necessary to name the parent folder 'hackforla' when setting up the development environment?
+33d49e14-6ac9-4f2a-ae09-824feac3963f,How can I confirm that my local repository is correctly linked to my forked repo on GitHub?
+33d49e14-6ac9-4f2a-ae09-824feac3963f,What command should I use to view the remote URLs associated with my local repository?
+33d49e14-6ac9-4f2a-ae09-824feac3963f,Why is it necessary to add an upstream remote to my local repository?
+33d49e14-6ac9-4f2a-ae09-824feac3963f,How do I add the upstream remote for the original Hack for LA repository?
+33d49e14-6ac9-4f2a-ae09-824feac3963f,"After adding the upstream remote, what should I expect to see when running 'git remote -v'?"
+7da5e900-3183-4d40-b0af-021562c21707,How do I update the origin remote URL for my forked repository?
+7da5e900-3183-4d40-b0af-021562c21707,What's the correct format for setting the origin remote URL in Git?
+7da5e900-3183-4d40-b0af-021562c21707,I cloned the main HackForLA repository instead of my fork. How can I fix this without starting over?
+729f9112-7dc4-4ad3-91c0-498578f7df13,What command should I use to add the original repository as a remote for syncing changes?
+729f9112-7dc4-4ad3-91c0-498578f7df13,How can I set up an 'upstream' remote to incorporate future updates from the main project?
+729f9112-7dc4-4ad3-91c0-498578f7df13,Is there a specific name I should use when adding the original Hack for LA repository as a remote?
+53899e16-a861-4283-995b-d1d53162a69a,What is the recommended approach for local development of the hackforla.org website?
+53899e16-a861-4283-995b-d1d53162a69a,Where can I find installation instructions for Docker on my specific operating system?
+53899e16-a861-4283-995b-d1d53162a69a,What should I do if I encounter difficulties installing Docker on my system?
+53899e16-a861-4283-995b-d1d53162a69a,Why is Docker recommended for local development of the Hack for LA website?
+53899e16-a861-4283-995b-d1d53162a69a,Where can I learn more about Docker and containerization concepts?
+dc2f0571-6ff0-4c0b-b230-e15d6c0977e4,"What should I do if I receive the error message 'You are not allowed to use Docker, you must be in the docker-users group' on Windows?"
+dc2f0571-6ff0-4c0b-b230-e15d6c0977e4,Is there a guide available for resolving Docker permission issues on Windows 10?
+dc2f0571-6ff0-4c0b-b230-e15d6c0977e4,Where can I find instructions for installing WSL2 on Windows?
+c007557d-2e08-4492-83b1-d50608914bce,What should I ensure is running on my computer before executing the bash commands for the local Jekyll server?
+c007557d-2e08-4492-83b1-d50608914bce,How can I start the Jekyll server locally to watch for changes and automatically rebuild the site?
+c007557d-2e08-4492-83b1-d50608914bce,Where should I navigate to in my terminal before running the docker-compose command?
+c007557d-2e08-4492-83b1-d50608914bce,What command should I use to start the local Jekyll server using Docker?
+c007557d-2e08-4492-83b1-d50608914bce,How can I access the locally running website after successfully starting the Docker container?
+2c34a7ce-fcd9-4e9d-a3d4-a2ae7e4454ba,What command should I use to completely remove the Jekyll server and its Docker container?
+2c34a7ce-fcd9-4e9d-a3d4-a2ae7e4454ba,How can I temporarily stop the server without destroying it for my daily development work?
+2c34a7ce-fcd9-4e9d-a3d4-a2ae7e4454ba,"If I've stopped the server without destroying it, what command will bring it back up later?"
+79ffc2f1-2b89-48f1-bca3-59a03ef828d5,Is Visual Studio Code required for installing the Code Spell Checker extension?
+79ffc2f1-2b89-48f1-bca3-59a03ef828d5,What are the different methods available for installing the Code Spell Checker extension?
+79ffc2f1-2b89-48f1-bca3-59a03ef828d5,Are there alternatives for developers who don't use VS Code?
+79ffc2f1-2b89-48f1-bca3-59a03ef828d5,Where can I find help if I encounter issues during installation?
+79ffc2f1-2b89-48f1-bca3-59a03ef828d5,How does the Code Spell Checker extension integrate with the local development environment?
+341a3625-cad8-4ef0-8a75-8a30212197b4,What is the recommended progression for working on issues of increasing complexity in the Hack for LA project?
+341a3625-cad8-4ef0-8a75-8a30212197b4,"How many team meetings are website team members required to attend per week, and what should they do if unable to attend?"
+341a3625-cad8-4ef0-8a75-8a30212197b4,What is the minimum time commitment expected from website team members on a weekly basis?
+341a3625-cad8-4ef0-8a75-8a30212197b4,What steps should be taken if a team member plans to take time off or go on vacation?
+341a3625-cad8-4ef0-8a75-8a30212197b4,"What experience should developers gain before joining another project within Hack for LA, and what additional skills are expected from backend engineers?"
+162d75fb-b896-423e-95f3-b7a12ddbc7b5,What are the current issues with role labels in the project?
+162d75fb-b896-423e-95f3-b7a12ddbc7b5,Can you explain the different complexity labels used in the issue tracking system?
+162d75fb-b896-423e-95f3-b7a12ddbc7b5,"How is the Prioritized Backlog column organized, and what does it signify?"
+162d75fb-b896-423e-95f3-b7a12ddbc7b5,Where can I find more information about the label system used in this repository?
+162d75fb-b896-423e-95f3-b7a12ddbc7b5,Are there any specific guidelines for working on issues based on their priority and complexity?
+7900ab8b-86e3-4a25-94d6-568f12529a0f,Where can I find the available issues to work on for the Hack for LA project?
+7900ab8b-86e3-4a25-94d6-568f12529a0f,Which specific column should developers focus on when looking for issues to contribute to?
+7900ab8b-86e3-4a25-94d6-568f12529a0f,"How are the issues in the Prioritized Backlog column organized, and why is this important for contributors?"
+93ec7603-cd37-46b7-829b-7cbcecd0f819,How can I find suitable tasks for beginners in the Hack for LA project?
+93ec7603-cd37-46b7-829b-7cbcecd0f819,What's the recommended way to select an issue to work on as a new contributor?
+93ec7603-cd37-46b7-829b-7cbcecd0f819,Are there separate categories for front-end and back-end tasks in the GitHub project board?
+23f3b585-f010-4fb4-9d77-a2a6d3e3a409,Where can I find GitHub issues suitable for returning team members?
+23f3b585-f010-4fb4-9d77-a2a6d3e3a409,How are tasks categorized by complexity in the project board?
+23f3b585-f010-4fb4-9d77-a2a6d3e3a409,Can you explain the different filtered views available for the Prioritized Backlog?
+2f9cf2ec-2f79-48cc-9557-0b5745871ab8,Where can I find issues specifically labeled for Hacktoberfest participation?
+2f9cf2ec-2f79-48cc-9557-0b5745871ab8,Is there a limit to the number of Hacktoberfest-labeled issues I can work on?
+2f9cf2ec-2f79-48cc-9557-0b5745871ab8,How do I indicate my interest in working on a particular Hacktoberfest issue?
+2f9cf2ec-2f79-48cc-9557-0b5745871ab8,What should I do if I want to contribute beyond Hacktoberfest?
+2f9cf2ec-2f79-48cc-9557-0b5745871ab8,Are there any specific roles or skill sets required for the available Hacktoberfest issues?
+6b8a51bf-b654-48fc-8d73-da40e3684e85,"As a contributor, what should I do if I notice a bug or error on the site that doesn't have an existing issue?"
+6b8a51bf-b654-48fc-8d73-da40e3684e85,Who should I contact if I discover a problem on the website that hasn't been documented yet?
+6b8a51bf-b654-48fc-8d73-da40e3684e85,How can I initiate the process of creating a new issue for a bug I've found on the Hack for LA website?
+fbaf73c8-6e05-4e15-bf3e-4119c7f0ca9d,How do I indicate that I'm starting work on an issue in the Hack for LA project?
+fbaf73c8-6e05-4e15-bf3e-4119c7f0ca9d,What steps should I take to properly claim and begin working on an issue in the project's GitHub repository?
+fbaf73c8-6e05-4e15-bf3e-4119c7f0ca9d,"Once I've completed work on an issue, do I need to manually move it to a different column or close it?"
+260c1b9c-1145-41dd-87ae-738df7db47b1,How can I visually see the process of assigning and unassigning myself to an issue in the project?
+260c1b9c-1145-41dd-87ae-738df7db47b1,Is there a step-by-step guide or demonstration available for issue assignment and unassignment?
+260c1b9c-1145-41dd-87ae-738df7db47b1,Where can I find a visual tutorial on managing my involvement with specific issues in the project?
+8fa8f710-1645-40d3-a6c4-22f5c6db766b,How do I assign myself to an issue I'm interested in working on?
+8fa8f710-1645-40d3-a6c4-22f5c6db766b,What steps should I follow to claim a task in the project's GitHub repository?
+8fa8f710-1645-40d3-a6c4-22f5c6db766b,Where can I find the option to assign myself to an issue on GitHub's interface?
+2fc82ba1-ca25-4036-8af2-1329baf7a612,How can I remove myself from an assigned issue in the project?
+2fc82ba1-ca25-4036-8af2-1329baf7a612,What steps should I follow to unassign myself from a task on GitHub?
+2fc82ba1-ca25-4036-8af2-1329baf7a612,Where can I find the option to clear assignees for an issue I'm working on?
+2b9b71b1-699f-4f9a-b051-806d61ebec50,How can I visually demonstrate the process of moving an issue between different columns on the project board?
+2b9b71b1-699f-4f9a-b051-806d61ebec50,What are the steps to transition an issue from 'Prioritized Backlog' to 'In progress (actively working)' status?
+2b9b71b1-699f-4f9a-b051-806d61ebec50,Is there a way to reverse the status of an issue from 'In progress' back to 'Prioritized Backlog' if needed?
+bc377434-8b72-491f-b0f7-37b1e728c4f0,How do I indicate that I've started working on an issue I've claimed?
+bc377434-8b72-491f-b0f7-37b1e728c4f0,What steps should I take to update the status of an issue I'm actively working on?
+bc377434-8b72-491f-b0f7-37b1e728c4f0,Where can I find the option to move an issue from 'Prioritized Backlog' to 'In progress'?
+e1a23c6e-4570-4d40-b075-ab59bdd65390,How do I move an issue from 'Prioritized Backlog' to 'In progress' when I start working on it?
+e1a23c6e-4570-4d40-b075-ab59bdd65390,Where can I find the dropdown menu to change the status of an issue I'm working on?
+e1a23c6e-4570-4d40-b075-ab59bdd65390,What steps should I take to indicate that I'm no longer actively working on an issue?
+6f37d968-50eb-4232-89c0-91580d872ef4,What format should I use when reporting my weekly progress on an issue?
+6f37d968-50eb-4232-89c0-91580d872ef4,How often am I expected to provide updates on my assigned issue?
+6f37d968-50eb-4232-89c0-91580d872ef4,Is there an automated system in place to remind contributors about updating their progress?
+6f37d968-50eb-4232-89c0-91580d872ef4,Where can I find more information about communication protocols within the website team?
+6f37d968-50eb-4232-89c0-91580d872ef4,Are visual representations of changes required when reporting progress on an issue?
+80de0c56-87f0-436e-bf96-66ff27f88123,What should I do if I become too busy to complete an assigned task?
+80de0c56-87f0-436e-bf96-66ff27f88123,How can I communicate that I prefer working on specific front-end or back-end tasks only?
+80de0c56-87f0-436e-bf96-66ff27f88123,What's the proper procedure if I encounter a blocker preventing me from finishing my current issue?
+7172cc73-f300-41da-9159-1b0beb8527b3,How should I update the issue status if I need to stop working on it before completion?
+7172cc73-f300-41da-9159-1b0beb8527b3,What information should I provide for the next developer when I have to pause my work on an issue?
+7172cc73-f300-41da-9159-1b0beb8527b3,What steps should I take to properly hand off an unfinished issue to another contributor?
+2b831b9f-2733-49bc-8e39-67d4b360c7b0,How can I stage changes in Visual Studio Code without using the terminal?
+2b831b9f-2733-49bc-8e39-67d4b360c7b0,What's the recommended approach for organizing work on different issues in the repository?
+2b831b9f-2733-49bc-8e39-67d4b360c7b0,Is there a specific example issue I can refer to when learning the contribution process?
+2b831b9f-2733-49bc-8e39-67d4b360c7b0,Are there alternative methods for staging changes if I'm not comfortable with the terminal?
+2b831b9f-2733-49bc-8e39-67d4b360c7b0,Why is it important to create separate branches for each issue I'm working on?
+5e6a3d13-236b-4a65-928a-a123ee8eefe5,How can I check which branch I'm currently on and see all available branches?
+5e6a3d13-236b-4a65-928a-a123ee8eefe5,What should I do if I'm not on the gh-pages branch when I want to create a new branch?
+5e6a3d13-236b-4a65-928a-a123ee8eefe5,Is it necessary to be on the gh-pages branch before creating a new branch for future issues?
+5e6a3d13-236b-4a65-928a-a123ee8eefe5,How do I update my gh-pages branch with the latest changes from the upstream repository?
+5e6a3d13-236b-4a65-928a-a123ee8eefe5,What command should I use to switch to the gh-pages branch if I'm working on a different branch?
+7f7e5275-abfb-4122-9038-20224f9a1ac3,How do I create a new branch for working on an issue in the Hack for LA project?
+7f7e5275-abfb-4122-9038-20224f9a1ac3,What are the best practices for naming a branch when working on a GitHub issue?
+7f7e5275-abfb-4122-9038-20224f9a1ac3,Is it recommended to use 'git add -all' or 'git add .' when preparing changes for commit?
+7f7e5275-abfb-4122-9038-20224f9a1ac3,What steps should I follow to switch to the gh-pages branch and update it with upstream changes?
+7f7e5275-abfb-4122-9038-20224f9a1ac3,How can I ensure I'm only committing files related to the current issue I'm working on?
+add59ce5-583f-4893-b875-8b1303e8e45f,"I've made changes to my local files, but they're not appearing when I run docker-compose up. What should I do?"
+add59ce5-583f-4893-b875-8b1303e8e45f,How can I troubleshoot if my Docker application isn't reflecting recent modifications?
+add59ce5-583f-4893-b875-8b1303e8e45f,Are there any specific steps to follow if Docker isn't showing my latest changes?
+add59ce5-583f-4893-b875-8b1303e8e45f,What should I do if clearing my browser cache doesn't resolve the issue with Docker not updating?
+add59ce5-583f-4893-b875-8b1303e8e45f,Who should I contact if I've tried all the suggested troubleshooting steps and still can't see my changes in Docker?
+5d8deeed-347b-4b63-9972-07575b0c7c97,What steps should I take before pushing my work to the repository?
+5d8deeed-347b-4b63-9972-07575b0c7c97,Is there a way to stage changes without using command line Git?
+5d8deeed-347b-4b63-9972-07575b0c7c97,How does staging and committing changes compare to saving in other programs?
+42b26784-acbc-4014-9b03-14467de99c65,What is the purpose of the 'git add' command in the context of preparing changes for a commit?
+42b26784-acbc-4014-9b03-14467de99c65,How can I stage changes from a specific file for committing in Git?
+42b26784-acbc-4014-9b03-14467de99c65,Is there a way to add all modified files to the staging area at once using Git?
+e83b7328-7629-4f46-adfe-f77ef8b8da82,How can I check which files are ready to be committed in my Git repository?
+e83b7328-7629-4f46-adfe-f77ef8b8da82,What should I do if I accidentally staged changes unrelated to the current issue I'm working on?
+e83b7328-7629-4f46-adfe-f77ef8b8da82,Why is it important to review the staged files before making a commit?
+4647e13a-212b-483a-8d9e-8a2dbdc4979a,How can I undo staging a file that I accidentally added but haven't committed yet?
+4647e13a-212b-483a-8d9e-8a2dbdc4979a,What's the correct Git command to remove a file from the staging area without deleting it from my local directory?
+4647e13a-212b-483a-8d9e-8a2dbdc4979a,Is there a way to unstage changes for a specific file while keeping other staged changes intact?
+f728b906-f154-4c0f-840c-d58a8f7eb1ba,What is the purpose of the git commit command and how do I use it effectively?
+f728b906-f154-4c0f-840c-d58a8f7eb1ba,"How can I add a descriptive message to my commit, and why is it important?"
+f728b906-f154-4c0f-840c-d58a8f7eb1ba,Is there a recommended format or length for commit messages?
+f728b906-f154-4c0f-840c-d58a8f7eb1ba,What should I do if I don't see my changes after running docker-compose up?
+f728b906-f154-4c0f-840c-d58a8f7eb1ba,How can I force Docker to rebuild the entire site?
+3ef62543-761f-4f53-b5c2-afe015593366,What should I do before pushing my local commits to the repository?
+3ef62543-761f-4f53-b5c2-afe015593366,How can I sync my fork with the main Hack For LA website repository on GitHub?
+3ef62543-761f-4f53-b5c2-afe015593366,Is there a visual guide available for syncing the fork on GitHub?
+3ef62543-761f-4f53-b5c2-afe015593366,"After syncing the fork, how do I bring upstream changes into my topic branch?"
+3ef62543-761f-4f53-b5c2-afe015593366,What is the command to pull changes from the upstream branch?
+b894598e-9ce4-4ddf-b2b1-78980ad73207,What should I do if I don't see any output when checking for changes in the main repository?
+b894598e-9ce4-4ddf-b2b1-78980ad73207,How can I safely push my local commits to my fork?
+b894598e-9ce4-4ddf-b2b1-78980ad73207,What happens if I just type 'git push' without any additional parameters?
+b894598e-9ce4-4ddf-b2b1-78980ad73207,What is the purpose of using the '--set-upstream' flag when pushing to a new branch?
+b894598e-9ce4-4ddf-b2b1-78980ad73207,How do I ensure that the branch name in my push command matches my local branch?
+96eb5c99-8fe4-43ed-8a40-a1c12ddbd0eb,What should I do if I see changes in the gh-pages branch when checking the upstream repository?
+96eb5c99-8fe4-43ed-8a40-a1c12ddbd0eb,How can I interpret the output when fetching from the upstream repository?
+96eb5c99-8fe4-43ed-8a40-a1c12ddbd0eb,Is it necessary to address changes in all branches shown in the fetch output?
+96eb5c99-8fe4-43ed-8a40-a1c12ddbd0eb,What steps should I take to incorporate upstream changes before merging or rebasing my issue branch?
+96eb5c99-8fe4-43ed-8a40-a1c12ddbd0eb,Why is it important to update my fork with the main repository's changes before proceeding with my work?
+a3f373af-9813-499d-a7ed-12734757bdc5,How can I synchronize my forked repository with the upstream repository?
+a3f373af-9813-499d-a7ed-12734757bdc5,What steps should I follow to create a local branch that tracks the upstream repository?
+a3f373af-9813-499d-a7ed-12734757bdc5,How do I incorporate changes from the upstream repository into my local clone?
+a3f373af-9813-499d-a7ed-12734757bdc5,What commands are necessary to merge upstream changes into my gh-pages branch?
+a3f373af-9813-499d-a7ed-12734757bdc5,"After merging upstream changes, how do I update my GitHub fork to reflect these changes?"
+bb1d4f26-0725-45c3-a0a8-0be7bf8bf4fe,What is the recommended method for incorporating updates from the main GitHub repository into my topic branch?
+bb1d4f26-0725-45c3-a0a8-0be7bf8bf4fe,Under what circumstances should I avoid rebasing my topic branch?
+bb1d4f26-0725-45c3-a0a8-0be7bf8bf4fe,"If I encounter conflicts during a rebase, what alternative approach can I use to incorporate changes from the main branch?"
+462ffe2a-11fc-4f51-b733-04e3803c5836,"As a Windows user, what additional software do I need to install for SSH connectivity with GitHub?"
+462ffe2a-11fc-4f51-b733-04e3803c5836,Is there a difference in SSH setup requirements between Windows and Mac users when contributing to the project?
+462ffe2a-11fc-4f51-b733-04e3803c5836,Where can I find the download link for the necessary tool to establish SSH connectivity on Windows?
+47062c68-e9bf-40e5-94a2-685481c7fcfe,How do I check if I already have SSH keys set up on my Mac?
+47062c68-e9bf-40e5-94a2-685481c7fcfe,What command should I use to generate a new SSH key for my GitHub account?
+47062c68-e9bf-40e5-94a2-685481c7fcfe,"After generating an SSH key, how do I ensure my machine is connected to my repository?"
+47062c68-e9bf-40e5-94a2-685481c7fcfe,What's the process for adding my newly created SSH key to the SSH agent?
+47062c68-e9bf-40e5-94a2-685481c7fcfe,"Once I've generated and added my SSH key, how do I add it to my GitHub account?"
+7d9187f5-3414-4be8-b6ea-2e2877939be7,How do I check if I already have SSH keys set up on my Windows machine?
+7d9187f5-3414-4be8-b6ea-2e2877939be7,What is the process for generating a new SSH key pair for GitHub on Windows?
+7d9187f5-3414-4be8-b6ea-2e2877939be7,"After creating an SSH key, how do I ensure my machine is connected to my repository?"
+7d9187f5-3414-4be8-b6ea-2e2877939be7,What steps should I take to add my newly created SSH key to the SSH agent?
+7d9187f5-3414-4be8-b6ea-2e2877939be7,How can I copy my SSH public key and add it to my GitHub account settings?
+754c7042-6713-4883-a7f9-9a1228979a0e,How do I push my changes to a feature branch in my remote repository?
+754c7042-6713-4883-a7f9-9a1228979a0e,What command should I use to set the upstream branch when pushing for the first time?
+754c7042-6713-4883-a7f9-9a1228979a0e,Can you provide an example of a pull request and its associated issue for reference?
+cf739d44-96c5-4554-aeba-fbf8a28a5d15,How can I preview what a pull request notification looks like?
+cf739d44-96c5-4554-aeba-fbf8a28a5d15,Is there a standard template for creating pull requests in this project?
+cf739d44-96c5-4554-aeba-fbf8a28a5d15,What information should I include when describing the changes I made in a pull request?
+cf739d44-96c5-4554-aeba-fbf8a28a5d15,How should I document visual changes to the website in my pull request?
+cf739d44-96c5-4554-aeba-fbf8a28a5d15,Can you show me an example of a properly formatted pull request for this project?
+6c5f6c27-f075-43d3-8059-454a68820f3f,What is the default content of the pull request title when it's first opened?
+6c5f6c27-f075-43d3-8059-454a68820f3f,How should I modify the default pull request title?
+6c5f6c27-f075-43d3-8059-454a68820f3f,Can you provide guidance on creating an effective pull request title?
+d1195610-fe98-486f-a24e-a358c197467d,How do I properly link an issue to my pull request in the Hack for LA website repository?
+d1195610-fe98-486f-a24e-a358c197467d,What's the correct format for connecting an issue to a pull request using the 'Fixes' keyword?
+d1195610-fe98-486f-a24e-a358c197467d,Can you explain the automated process for closing issues when a pull request is merged in the Hack for LA project?
+a0235484-04f5-4db2-8fe1-5679fd0d9659,How should I structure my explanation of changes made in a pull request for the Hack for LA website repository?
+a0235484-04f5-4db2-8fe1-5679fd0d9659,What information is crucial to include when describing the modifications I've made in a pull request?
+a0235484-04f5-4db2-8fe1-5679fd0d9659,Is there a specific format or template I should follow when explaining the rationale behind my changes in a pull request?
+a0235484-04f5-4db2-8fe1-5679fd0d9659,How detailed should my explanation be when describing the changes and their reasons in a pull request for the Hack for LA website?
+a0235484-04f5-4db2-8fe1-5679fd0d9659,Are there any guidelines for summarizing the purpose and impact of changes made in a pull request for updating project information on the Hack for LA website?
+66206035-17c1-4b13-925b-a1020a80b6b2,How do I include screenshots of website changes in my pull request?
+66206035-17c1-4b13-925b-a1020a80b6b2,What should I do if my pull request doesn't involve visual changes to the website?
+66206035-17c1-4b13-925b-a1020a80b6b2,Is it necessary to include both 'before' and 'after' screenshots in the pull request?
+66206035-17c1-4b13-925b-a1020a80b6b2,Are there any specific formatting requirements for adding images to the pull request description?
+66206035-17c1-4b13-925b-a1020a80b6b2,Can I include screenshots of code changes in my pull request for the Hack for LA website?
+11e8d000-64d5-4692-9870-57eaff53192a,How can I ensure my pull request is properly tracked on the Project Board?
+11e8d000-64d5-4692-9870-57eaff53192a,Is there an automated process for adding new pull requests to the Project Board?
+11e8d000-64d5-4692-9870-57eaff53192a,What should I do if I don't see my pull request on the Project Board after submission?
+11e8d000-64d5-4692-9870-57eaff53192a,Where can I find the option to manually add my pull request to the Project Board?
+11e8d000-64d5-4692-9870-57eaff53192a,Can you explain the process of adding a pull request to the project board visually?
+a494d648-688d-4419-a93d-1796ad1dc58d,What steps should I take after completing my assignment and committing changes?
+a494d648-688d-4419-a93d-1796ad1dc58d,How do I return to the main branch after finishing my work on a feature branch?
+a494d648-688d-4419-a93d-1796ad1dc58d,What is the process for cleaning up my workspace after my pull request has been merged?
+5a8904f1-78e4-4053-bb59-26e600c6966e,What is the recommended approach for making changes to code in an existing pull request?
+5a8904f1-78e4-4053-bb59-26e600c6966e,How can I update my pull request after receiving feedback from a reviewer?
+5a8904f1-78e4-4053-bb59-26e600c6966e,Are there any resources available for new contributors to learn about the pull request review process?
+5a8904f1-78e4-4053-bb59-26e600c6966e,Where can I find information on creating issues for the project?
+5a8904f1-78e4-4053-bb59-26e600c6966e,Is it advisable to edit code directly from the GitHub pull request interface?
+dc86af62-f5ff-45cf-9dce-d4b46c9c474b,What causes merge conflicts in version control systems?
+dc86af62-f5ff-45cf-9dce-d4b46c9c474b,How can I resolve a merge conflict when working on an open source project?
+dc86af62-f5ff-45cf-9dce-d4b46c9c474b,Are there any tools or features in VSCode that can help with managing merge conflicts?
+dc86af62-f5ff-45cf-9dce-d4b46c9c474b,What should I do if I accidentally delete a file that another contributor has modified?
+dc86af62-f5ff-45cf-9dce-d4b46c9c474b,How can I prevent merge conflicts when collaborating with other developers on a project?
+b8e03b85-f89b-45eb-a4b4-34da8fce25c2,How can I effectively communicate a blocker I'm facing in my assigned issue?
+b8e03b85-f89b-45eb-a4b4-34da8fce25c2,What's the proper way to reference the branch I'm working on when seeking assistance?
+b8e03b85-f89b-45eb-a4b4-34da8fce25c2,Could you explain the process of sharing a specific comment link from an issue?
+b8e03b85-f89b-45eb-a4b4-34da8fce25c2,Where should I post my request for help after documenting the problem?
+b8e03b85-f89b-45eb-a4b4-34da8fce25c2,What can I expect from the Website Leadership/Merge Team when I ask for help?
+e6e32d17-c2eb-478e-aa19-5ead653e150d,Where can I find comprehensive information about Hack for LA's project structure and processes?
+e6e32d17-c2eb-478e-aa19-5ead653e150d,Is there a guide available for new contributors to understand how to become part of the Hack for LA team?
+e6e32d17-c2eb-478e-aa19-5ead653e150d,How can I learn about the proper procedures for reviewing pull requests in the Hack for LA project?
+e6e32d17-c2eb-478e-aa19-5ead653e150d,Are there any resources that explain how to create and label issues effectively in the Hack for LA repository?
+e6e32d17-c2eb-478e-aa19-5ead653e150d,Where can I find instructions on working with feature branches and resolving merge conflicts in the Hack for LA project?
+ae00f395-3da6-4329-b048-d34236f2f76e,What documentation resources are available for working with Jekyll in our project?
+ae00f395-3da6-4329-b048-d34236f2f76e,Where can I find comprehensive information about using Liquid templating in our repositories?
+ae00f395-3da6-4329-b048-d34236f2f76e,Are there any official guides or documentation for setting up Docker and Docker Compose in our development environment?

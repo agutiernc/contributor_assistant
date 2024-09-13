@@ -1,0 +1,491 @@
+[
+    {
+        "id": "3ba4d080-97a6-4954-829e-121e008c43e9",
+        "page_content": "In the `hfla-site` Slack channel, send an introductory message with your GitHub handle/username asking to be added to the Hack for LA website GitHub repository (this repository).  \n**NOTE:** Once you have accepted the GitHub invite (comes via email or in your GitHub notifications), **please do the following**:  \n1. Make your own Hack for LA GitHub organization membership public by following this [guide](https://help.github.com/en/articles/publicizing-or-hiding-organization-membership#changing-the-visibility-of-your-organization-membership).\n2. Set up two-factor authentication on your account by following this [guide](https://docs.github.com/en/github/authenticating-to-github/configuring-two-factor-authentication).  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 1: Setting up the development environment**",
+        "header_3": "**1.1 Dev setup (1): Join the repository team**"
+    },
+    {
+        "id": "b3c6a636-faff-4353-b429-4175bda0a22e",
+        "page_content": "Before cloning your forked repository to your local machine, you must have Git installed. You can find instructions for installing Git for your operating system [**here**](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). Please note that if you have a Mac the page offers several options (see other option, if you need to conserve hard drive space) including:  \n- an \u201ceasiest\u201d option (this version is fine for use at hackforla): This option would take just over 4GB.\n- a \u201cmore up to date\u201d option (not required but optional if you want it): This option prompts you to go to install an 8GB package manager called Homebrew.\n- Other option: If your computer is low on space, you can use this [tutorial](https://www.datacamp.com/community/tutorials/homebrew-install-use) to install XCode Command Tools and a lighter version of Homebrew and then install Git using this command: ```$ brew install git```  which in total only uses 300MB.  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 1: Setting up the development environment**",
+        "header_3": "**1.2 Dev setup (2): Installing Git**"
+    },
+    {
+        "id": "cd95b82f-577c-4785-a6c9-506f830d8876",
+        "page_content": "You can fork the hackforla/website repository by clicking <a href=\"https://github.com/hackforla/website/fork\"> <button> <img src=\"https://user-images.githubusercontent.com/17777237/54873012-40fa5b00-4dd6-11e9-98e0-cc436426c720.png\" width=\"8px\"> Fork</button></a>\n. A fork is a copy of the repository that will be placed on your GitHub account.  \n<details>\n<summary><strong>Click here</strong> to see a visual example of the `fork` button within the website repo</summary>\n<p><strong>First, you find the `fork` button on the top right hand side of the [Hack for LA website repo](https://github.com/hackforla/website)</strong></h4>\n<img src=\"https://user-images.githubusercontent.com/21162229/137044762-c80f18e8-b785-48fb-a286-81c1117c0178.jpg\" />\n<p><strong>Next, a modal may open and request where you want to fork this website repo. Please click on your avatar or your GitHub username</strong></p>\n<img src=\"https://user-images.githubusercontent.com/21162229/137045294-3d46b28c-edbb-410c-98f1-13940ecc5c5f.jpg\">\n</details><br>  \n**Note:** It should create a URL that looks like the following -> `https://github.com/<your_GitHub_user_name>/website`.  \n**For example** -> `https://github.com/octocat/website`.  \n**Be Aware:** What you have created is a forked copy in a remote version on GitHub. It is not yet on your local machine yet.  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 1: Setting up the development environment**",
+        "header_3": "**1.3 Dev setup (3): Fork the repository**"
+    },
+    {
+        "id": "30f244ee-b626-47b8-8775-9b1f539487ad",
+        "page_content": "Before creating a copy to your local machine, you must have Git installed. You can find instructions for installing Git for your operating system [**here**](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).  \nThe following steps will clone (create) a local copy of the forked repository on your computer.",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 1: Setting up the development environment**",
+        "header_3": "**1.4 Dev setup (4): Clone (Create) a copy on your computer**"
+    },
+    {
+        "id": "ac8e0f36-ea98-4ce0-badc-4b1195f83651",
+        "page_content": "Create a new folder in your computer that will contain `hackforla` projects.  \nIn your command line interface (Terminal, Git Bash, Powershell), move to where you want your new folder to be placed and create a new folder in your computer that will contain `hackforla` projects. After that, navigate into the folder(directory) you just created.  \nFor example:\n```bash\nmkdir hackforla\ncd hackforla\n```  \nand run the following commands:  \n```bash\ngit clone https://github.com/<your_GitHub_user_name>/website.git\n```  \nFor example if your GitHub username was `octocat`:\n```bash\ngit clone https://github.com/octocat/website.git\n```  \nYou should now have a new folder in your `hackforla` folder called `website`. Verify this by changing into the new directory:  \n```bash\ncd website\n```",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 1: Setting up the development environment**",
+        "header_3": "**1.4 Dev setup (4): Clone (Create) a copy on your computer**",
+        "header_4": "**1.4.a Clone repo (1): Create  `hackforla` folder**"
+    },
+    {
+        "id": "33d49e14-6ac9-4f2a-ae09-824feac3963f",
+        "page_content": "Verify that your local cloned repository is pointing to the correct `origin` URL (that is, the forked repo on your own Github account):\n```bash\ngit remote -v\n```\nYou should see `fetch` and `push` URLs with links to your forked repository under your account (i.e. `https://github.com/<your_GitHub_user_name>/website.git`). You are all set to make working changes to the website on your local machine.  \nHowever, we still need a way to keep our local repo up to date with the deployed website. To do so, you must add an upstream remote to incorporate changes made while you are working on your local repo. Run the following to add an upstream remote URL & update your local repo with recent changes to the `hackforla` version:  \n```bash\ngit remote add upstream https://github.com/hackforla/website.git\ngit fetch upstream\n```  \nAfter adding the upstream remote, you should now see it if you again run `git remote -v` :\n```bash\norigin  https://github.com/<your_GitHub_user_name>/website.git (fetch)\norigin  https://github.com/<your_GitHub_user_name>/website.git (push)\nupstream        https://github.com/hackforla/website.git (fetch)\nupstream        https://github.com/hackforla/website.git (push)\n```",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 1: Setting up the development environment**",
+        "header_3": "**1.4 Dev setup (4): Clone (Create) a copy on your computer**",
+        "header_4": "**1.4.b Clone repo (2): Verify `origin` remote url**"
+    },
+    {
+        "id": "7da5e900-3183-4d40-b0af-021562c21707",
+        "page_content": "Set your forked repo on your Github as an `origin` remote:\n```bash\ngit remote set-url origin https://github.com/<your_GitHub_user_name>/website.git\n```  \nFor example if your GitHub username was `octocat`:\n```bash\ngit remote set-url origin https://github.com/octocat/website.git\n```",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 1: Setting up the development environment**",
+        "header_3": "**1.4 Dev setup (4): Clone (Create) a copy on your computer**",
+        "header_4": "**1.4.c What if you accidentally cloned using the repository URL from the HackForLA Github (instead of the fork on your Github)?**",
+        "header_5": "**i. Resolve remote (1): reset `origin` remote url**"
+    },
+    {
+        "id": "729f9112-7dc4-4ad3-91c0-498578f7df13",
+        "page_content": "Add another remote called `upstream` that points to the `hackforla` version of the repository. This will allow you to incorporate changes later:\n```bash\ngit remote add upstream https://github.com/hackforla/website.git\n```  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 1: Setting up the development environment**",
+        "header_3": "**1.4 Dev setup (4): Clone (Create) a copy on your computer**",
+        "header_4": "**1.4.c What if you accidentally cloned using the repository URL from the HackForLA Github (instead of the fork on your Github)?**",
+        "header_5": "**ii. Resolve remote (2): Add an `upstream` remote**"
+    },
+    {
+        "id": "53899e16-a861-4283-995b-d1d53162a69a",
+        "page_content": "Docker is the recommended approach to quickly getting started with local development. Docker helps create a local/offline version of the hackforla.org website on your computer so you can test out your code before submitting a pull request.  \nThe recommended installation method for your operating system can be found [here](https://docs.docker.com/install/). <strong><em>Feel free to reach out in the [Hack for LA Slack channel](https://hackforla.slack.com/archives/C4UM52W93/) if you have trouble installing docker on your system</em></strong>  \nMore on using Docker and the concepts of containerization:  \n* [Get started with Docker](https://docs.docker.com/get-started/)",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 1: Setting up the development environment**",
+        "header_3": "**1.5 Dev setup (5): Set up Docker**"
+    },
+    {
+        "id": "dc2f0571-6ff0-4c0b-b230-e15d6c0977e4",
+        "page_content": "If you are on Windows and get 'You are not allowed to use Docker, you must be in the \"docker-users\" group' as an error message, the following wiki page is a guide for solving the issue:\n- [Windows docker-users group error guide](https://github.com/hackforla/website/wiki/Add-local-user-accounts-to-the-docker-users-group-on-Windows-10)  \nInstalling WSL2 on windows\n- https://docs.microsoft.com/en-us/windows/wsl/install-win10  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 1: Setting up the development environment**",
+        "header_3": "**1.5 Dev setup (5): Set up Docker**",
+        "header_4": "**1.5.a Docker installation troubleshooting**"
+    },
+    {
+        "id": "c007557d-2e08-4492-83b1-d50608914bce",
+        "page_content": "**IMPORTANT:** Please make sure the `Docker Desktop` application is **running on your computer** before you run the bash commands below.  \n- This command starts a jekyll server locally. The server watches for changes to\nthe source files and rebuilds and refreshes the site automatically in your browser.  \nNavigate to within the `website` directory that you cloned earlier in your terminal then run the below command  \n```bash\ndocker-compose up\n```  \nRunning the above command will result in the following output in your terminal  \n<details>\n<summary><strong>Click here</strong> to see an example terminal output</summary>  \n```bash\nStarting hfla_site ... done\nAttaching to hfla_site\nhfla_site    | ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-linux-musl]\nhfla_site    | Configuration file: _config.yml\nhfla_site    | Configuration file: _config.docker.yml\nhfla_site    |             Source: .\nhfla_site    |        Destination: /srv/jekyll/_site\nhfla_site    |  Incremental build: enabled\nhfla_site    |       Generating...\nhfla_site    |                     done in 33.641 seconds.\nhfla_site    |                     Auto-regeneration may not work on some Windows versions.\nhfla_site    |                     Please see: https://github.com/Microsoft/BashOnWindows/issues/216\nhfla_site    |                     If it does not work, please upgrade Bash on Windows or run Jekyll with --no-watch.\nhfla_site    |  Auto-regeneration: enabled for '.'\nhfla_site    | LiveReload address: http://0.0.0.0:35729\nhfla_site    |     Server address: http://0.0.0.0:4000/\nhfla_site    |   Server running... press ctrl-c to stop.\n```  \n</details>  \nWhen you see the above output, it means the site is now running and now you can browse to http://localhost:4000",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 1: Setting up the development environment**",
+        "header_3": "**1.6 Dev setup (6): Build and serve the website locally**",
+        "header_4": "**1.6.a Starting Docker**"
+    },
+    {
+        "id": "2c34a7ce-fcd9-4e9d-a3d4-a2ae7e4454ba",
+        "page_content": "- To stop and completely remove the jekyll server (i.e. the running Docker container):  \n*(do this anytime Docker or jekyll configuration or other repository settings change)*  \n```bash\ndocker-compose down\n```  \nTo stop the server, but not destroy it (often sufficient for day-to-day work):  \n```bash\ndocker-compose stop\n```  \nBring the same server back up later with:  \n```bash\ndocker-compose up\n```",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 1: Setting up the development environment**",
+        "header_3": "**1.6 Dev setup (6): Build and serve the website locally**",
+        "header_4": "**1.6.b Stopping Docker**"
+    },
+    {
+        "id": "79ffc2f1-2b89-48f1-bca3-59a03ef828d5",
+        "page_content": "You must use VS Code as your local text editor to install the VS Code extension for spell checking your codebase, Code Spell Checker.  \nThe recommended installation method is to install Code Spell Checker directly from the VS Code text editor, and those instructions can be found [here](https://code.visualstudio.com/learn/get-started/extensions).\nThe extension can also be installed via the VS Code Marketplace website [here](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker).  \nFor developers who do not use VS Code, use the corresponding npm package, cspell, and those instructions can be found [here](https://www.npmjs.com/package/cspell).  \n<strong><em>Feel free to reach out in the [Hack for LA Slack channel](https://hackforla.slack.com/archives/C4UM52W93/) if you have trouble installing the VS Code extension or the cspell npm package on your system.</em></strong>  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 1: Setting up the development environment**",
+        "header_3": "**1.7 Dev setup (7): Install local codebase spell checker**"
+    },
+    {
+        "id": "341a3625-cad8-4ef0-8a75-8a30212197b4",
+        "page_content": "In order to work on a `Complexity: Small`/`Complexity: Medium`/`Complexity: Large` label issue within this repo, you need to complete the following:  \n1. `good first issue`\n* Self-assign an issue with the `good first issue` label.\n* Complete steps in [**2.7 Working on an issue**](#27-working-on-an-issue) to create a solution for the issue\n* Complete steps in [**3.1 How to make a pull request**](#31-how-to-make-a-pull-request) to get your solution reviewed by the `website-merge` team.\n* Once your pull request is merged, you can work on your next issue.\n2.  Repeat #1 with a new `good first issue`  \nProgress through issues with increasing complexity in the following order:\n1. Good first issue (x2)\n2. Small\n3. Medium\n4. Large\n5. Extra Large  \nThe reasons for this progression are:\n* The issues start out as being prescriptive and become less so as you gain more experience by working through increasingly complex issues.\n* We are trying to teach you the team methodology through the issues themselves.\n* It ensures you understand what we expect and the quality of contributions.  \nAll website team members are required to attend at least 1 team meeting in a week (held on Tuesdays, Thursdays and Sundays). In case, you are unable in any given week, you should reach out to the tech leadership team. Exceptions to this requirement may be provided on a case-by-case basis.  \nAll website team members are expected to devote a minimum of 6 hours per week while working on various assignments during their entire tenure at the website team (excluding week offs and vacations).  \nAlso, please let the tech leadership team know (through a Slack message in the hfla-site channel as well as an @ mention in a comment of the issue that you would be working on) if you are planning to take a week off or a longer vacation.  \nPrior to joining [another project within Hack for LA](https://www.hackforla.org/projects/), developers should gain the following experience:\n* Setting up your local environment from a CONTRIBUTING file\n* Completing the above series of issues at least up to `Complexity: Large`\n* Resolving Merge Conflicts\n* Reviewing other people's Pull Requests\n* Create or improve documentation for other developers\n* Mentor other developers\n* Create new issues  \nIn addition, backend engineers should complete issues that provide experience with the following:\n* API requests\n* Cron Job Scripting\n* CRUD operations  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.1 Hack for LA Contributor expectations**"
+    },
+    {
+        "id": "162d75fb-b896-423e-95f3-b7a12ddbc7b5",
+        "page_content": "We currently have issues with the following **role** labels:  \n* `role: front end`\n* `role: backend/devOps`  \nAnd the following **complexity** labels:  \n* `good first issue`\n* `complexity: Small`\n* `complexity: Medium`\n* `complexity: Large`  \n**Note:** The Prioritized Backlog column is filtered so the first (top) issue has the highest priority and should be worked on next. <br />  \n**Note:** if you would like to learn more about our label system you can read this [wiki on how to read and interpret our repo labels](https://github.com/hackforla/website/wiki/How-to-read-and-interpret-labels)  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.2 How Hack for LA organizes issues**"
+    },
+    {
+        "id": "7900ab8b-86e3-4a25-94d6-568f12529a0f",
+        "page_content": "The best way to view the issues available is our [GitHub Project Board](https://github.com/orgs/hackforla/projects/86)  \nFor the purpose of finding issues to work on, developers should focus exclusively on the `Prioritized Backlog` column, which contains all the available issues that have been approved and prioritized.\n**Note:** The column is filtered so the first (top) issue has the highest priority and should be worked on next.",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.3 Where can I find GitHub issues to work on?**"
+    },
+    {
+        "id": "93ec7603-cd37-46b7-829b-7cbcecd0f819",
+        "page_content": "Use the link [`good first issues`](https://github.com/orgs/hackforla/projects/86/views/2) to display \"good first issues\" (for both front end and back end roles) in the Prioritized Backlog column.  \n**Note:** The column is filtered so the first (top) issue has the highest priority and should be worked on next.",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.3 Where can I find GitHub issues to work on?**",
+        "header_4": "**2.3.a Available issues for new members**"
+    },
+    {
+        "id": "23f3b585-f010-4fb4-9d77-a2a6d3e3a409",
+        "page_content": "* `Prioritized Backlog` column in the [filtered Project Board - **complexity: Small** label](https://github.com/orgs/hackforla/projects/86/views/3)\n* `Prioritized Backlog` column in the [filtered Project Board - **complexity: Medium** label](https://github.com/orgs/hackforla/projects/86/views/4)\n* `Prioritized Backlog` column in the [filtered Project Board - **complexity: Large and XLarge** label](https://github.com/orgs/hackforla/projects/86/views/5)",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.3 Where can I find GitHub issues to work on?**",
+        "header_4": "**2.3.b Available issues for returning members**"
+    },
+    {
+        "id": "2f9cf2ec-2f79-48cc-9557-0b5745871ab8",
+        "page_content": "Please use the `Prioritized Backlog` column in the [filtered Project Board - **Hacktoberfest** label](https://github.com/orgs/hackforla/projects/86/views/4?filterQuery=status%3A%22Prioritized+backlog%22+label%3A%22hacktoberfest%22+label%3A%22role%3A+front+end%22+)  \n**Note:** You can only submit a pull request for one (1) issue with the `Hacktoberfest` label. Also leave a comment within the issue you would like to work on.\n**Note:** If you would like to continue to contribute please join our team. You can find more information on our [Hack for LA Getting Started Page](https://www.hackforla.org/getting-started).",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.3 Where can I find GitHub issues to work on?**",
+        "header_4": "**2.3.c Issues for Hacktoberfest contributors**"
+    },
+    {
+        "id": "6b8a51bf-b654-48fc-8d73-da40e3684e85",
+        "page_content": "If you see any bugs/errors within the site and there is not an issue for it, please reach out to any of the [Website leadership/merge team](https://www.hackforla.org/projects/website) and they will help you create an issue you can resolve.  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.3 Where can I find GitHub issues to work on?**",
+        "header_4": "**2.3.d What if you see bugs/errors that are not connected to an issue?**"
+    },
+    {
+        "id": "fbaf73c8-6e05-4e15-bf3e-4119c7f0ca9d",
+        "page_content": "Once you find an issue you want to work on, you need to self-assign to claim it and then move the issue from the `Prioritized Backlog` to the `In progress`. Both of these tasks can be accomplished within the issue. Please see the examples below. (Note: Any issue that you are working on besides the pre-work issue should remain in the `In progress` column and stay open. Once a member of the merge team or a tech lead merges your pull request associated with that issue, there is automation through GitHub Actions that will take care of moving the issue to a different column and closing the issue.)",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.4 Claiming an Issue**"
+    },
+    {
+        "id": "260c1b9c-1145-41dd-87ae-738df7db47b1",
+        "page_content": "<details>\n<summary><strong>Click here</strong> to see how you assign & unassign yourself to an issue</summary>\n<p><strong>Assign/Unassign demo</strong></p>\n<img src=\"https://user-images.githubusercontent.com/21162229/137636320-e96ef70d-3c85-405e-90d2-ee7b3bba071f.gif\">\n</details>",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.4 Claiming an Issue**",
+        "header_4": "**2.4.a Assign & Unassign yourself to this issue**"
+    },
+    {
+        "id": "8fa8f710-1645-40d3-a6c4-22f5c6db766b",
+        "page_content": "* Go to the issue you want to work on\n* Go to the right hand menu under `Assignees`\n*  Click the `assign yourself` link",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.4 Claiming an Issue**",
+        "header_4": "**2.4.a Assign & Unassign yourself to this issue**",
+        "header_5": "**i. If you want to to self assign an issue:**"
+    },
+    {
+        "id": "2fc82ba1-ca25-4036-8af2-1329baf7a612",
+        "page_content": "* Go to the issue you are assigned to\n* Go to the right hand menu and click on the gear wheel (:gear:) to the right of `Assignees`\n* Click on the `X clear assignees` link",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.4 Claiming an Issue**",
+        "header_4": "**2.4.a Assign & Unassign yourself to this issue**",
+        "header_5": "**ii. If you want to to remove yourself an issue:**"
+    },
+    {
+        "id": "2b9b71b1-699f-4f9a-b051-806d61ebec50",
+        "page_content": "<details>\n<summary><strong>Click here</strong> to see how to move an issue from the \u2018Prioritized Backlog\u2019 to the \u2018In progress (actively working)\u2019 & back</summary>\n<p><strong>Project Board column demo</strong></p>\n<img src=\"https://user-images.githubusercontent.com/21162229/137693338-97fe5f6c-820d-41c9-8e93-57b70827e0cf.gif\" />\n</details>",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.4 Claiming an Issue**",
+        "header_4": "**2.4.b Move this issue from the \u2018Prioritized Backlog\u2019 to the \u2018In progress\u2019 & back**"
+    },
+    {
+        "id": "bc377434-8b72-491f-b0f7-37b1e728c4f0",
+        "page_content": "* Click on the dropdown menu within the `Projects` section of the right-hand menu (value will show `Prioritized Backlog` if unclaimed)\n* Select `In progress (actively working)`",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.4 Claiming an Issue**",
+        "header_4": "**2.4.b Move this issue from the \u2018Prioritized Backlog\u2019 to the \u2018In progress\u2019 & back**",
+        "header_5": "**i. After you claim an issue:**"
+    },
+    {
+        "id": "e1a23c6e-4570-4d40-b075-ab59bdd65390",
+        "page_content": "* Click on the dropdown menu within the `Projects` section of the right-hand menu (value will show `In progress (actively working)` if unclaimed)\n* Select `Prioritized Backlog`  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.4 Claiming an Issue**",
+        "header_4": "**2.4.b Move this issue from the \u2018Prioritized Backlog\u2019 to the \u2018In progress\u2019 & back**",
+        "header_5": "**ii. After you unassign yourself from an issue:**"
+    },
+    {
+        "id": "6f37d968-50eb-4232-89c0-91580d872ef4",
+        "page_content": "- Be sure to check the box when you finish an action item.\n- Report your progress weekly in a comment below using the following format:\n1. `Progress`: \"What is the current status of your project? What have you completed and what is left to do?\"\n2. `Blockers`: \"Difficulties or errors encountered.\"\n3. `Availability`: \"How much time will you have this week to work on this issue?\"\n4. `ETA`: \"When do you expect this issue to be completed?\"\n5. `Pictures` (**optional**): \"Add any pictures of the visual changes made to the site so far.\"  \n**Note:** We currently have a GitHub action action that requests an update via a comment after 7 days of inactivity within an issue. Please be sure to provide weekly updates on progress and/or blockers so we can help you resolve them.  \n**Note:** If you would like to know more about how we provide updates within the website team, please read this [wiki on how to communicate with our website team](https://github.com/hackforla/website/wiki/How-to-communicate-with-the-team)  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.5 Reporting progress on your issue**"
+    },
+    {
+        "id": "80de0c56-87f0-436e-bf96-66ff27f88123",
+        "page_content": "- Got personally busy, can\u2019t finish\n- Only want to do a specific type of front end or back end task\n- There is a blocker in the way of finishing and you would like the opportunity to work on other issues",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.6 What to do when you need to stop mid issue**",
+        "header_4": "**2.6.a Reasons for having to stop:**"
+    },
+    {
+        "id": "7172cc73-f300-41da-9159-1b0beb8527b3",
+        "page_content": "- For your issue, uncheck the checkboxes for any action items that have to be redone by the next developer picking up the issue.\n- Add a note in the comments with details and progress for the next developer\n- Move this issue from the \u2018In progress\u2019 to the \u2018Prioritized Backlog\u2019(see - [project board column example above](#ii-after-you-unassign-yourself-from-an-issue))\n- Unassign yourself from this issue (see the [unassign example above](#24a-assign--unassign-yourself-to-this-issue))  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.6 What to do when you need to stop mid issue**",
+        "header_4": "**2.6.b What to do if you have to stop working mid issue:**"
+    },
+    {
+        "id": "2b831b9f-2733-49bc-8e39-67d4b360c7b0",
+        "page_content": "- If you are using Visual studios code you can use the Git graphical user interface to stage your changes. For instructions check out the [Git gui wiki](https://github.com/hackforla/website/wiki/How-to-Use-Git-GUI-(Graphical-user-Interface)-in-Visual-Studios-Code)  \n**Note:** Alternatively you can follow the instructions below to stage changes through the terminal. We will be using [Update \u2018Give\u2019 image credit link and information - #2093](https://github.com/hackforla/website/issues/2093) as an example issue we will be following.  \nCreate a new branch for each issue you work on. Doing all your work on topic branches leaves your repository's main branch (named `gh-pages`) unmodified and greatly simplifies keeping your fork in sync with the main project.",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**"
+    },
+    {
+        "id": "5e6a3d13-236b-4a65-928a-a123ee8eefe5",
+        "page_content": "The `git branch` command will let you know what branch you are in, and what branch names are already in use.  \n```bash\ngit branch\n```  \nYou will see a list of all of your branches. There will be a star (`*`) next to the branch that you are currently in. By default you should start on the `gh-pages` branch.  \n**Note:** When you work on future issues, you must always be in the `gh-pages` branch when creating a new branch.  \nIf you are not currently in the `gh-pages` branch, run the following command to return to it:  \n```bash\ngit checkout gh-pages\n```  \nUpdate your gh-pages branch with upstream changes:  \n```bash\ngit pull upstream gh-pages\n```",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.a Working on an issue (1): Verify current branch is `gh-pages`**"
+    },
+    {
+        "id": "7f7e5275-abfb-4122-9038-20224f9a1ac3",
+        "page_content": "If you have not already done so, run `git checkout gh-pages` to switch the working directory to the `gh-pages` branch and then update `gh-pages` with upstream changes as described above in Section 2.7.a.  \nUsing the `-b` flag you can also use the `git checkout` command to create a new branch and immediately switch into it.  \nFor example, if you create a new issue branch for [Update \u2018Give\u2019 image credit link and information - #2093](https://github.com/hackforla/website/issues/2093):  \n```bash\ngit checkout -b update-give-link-2093\n```  \nThe text after the `-b`, in the example `update-give-link-2093`, will be the name of your new branch.  \n**Note:** Choose a branch name that:\n* relates to the issue (No spaces!)\n* includes the issue number  \n**Note:** The format should look like the scheme above where the words are a brief description of the issue that will make sense at a glance to someone unfamiliar with the issue.  \n**Note:** No law of physics will break if you don't adhere to this scheme, but laws of git will break if you add spaces.  \nWe urge developers to be cautious using `git add`. In general it is not advisable to use `git add -all` or `git add .`. Rather, run `git status`, examine the output carefully, and then add only those files specifically related to the current issue. This will ensure that no extraneous files are included in the subsequent commit.  \nWhen you've finished working on your issue, follow the steps below to prepare your changes to push to your repository.",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.b Working on an issue (2): Create a new branch where you will work on your issue**"
+    },
+    {
+        "id": "add59ce5-583f-4893-b875-8b1303e8e45f",
+        "page_content": "If you do not see the changes you applied when you run `docker-compose up`, **do the following**:  \n1. Stop running your Docker application (if still running).\n2. Delete the `_site` directory in the root folder (`website`)\n3. Delete the `.jekyll-metadata` file in the root folder (`website`)\n4. Finally, restart docker (run `docker-compose up` in the terminal) and you should see your changes.\n<br><br>  \n- If the above steps did not resolve your issue, run through the first three steps again, but try resetting your browser's cache before restarting docker (you can also try running http://localhost:4000 in another browser).\n- If you still do not see your changes after trying these steps, please feel free to reach out to the team in the [#hfla-site](https://hackforla.slack.com/archives/C4UM52W93) Slack channel, or bring up your issue in a dev meeting.",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.b Working on an issue (2): Create a new branch where you will work on your issue**",
+        "header_5": "**i. What if you cannot see your changes locally within Docker?**"
+    },
+    {
+        "id": "5d8deeed-347b-4b63-9972-07575b0c7c97",
+        "page_content": "Once you are done with the work on your issue you will push it to your repository.  Before you can push your work to your repository, you will stage and commit your changes.  These two commands are similar to the save command that you have used to in other programs.  \n**Note:** If you are using Visual studios code you can use the Git graphical user interface to stage your changes. For instructions check out the [Git Gui Wiki](https://github.com/hackforla/website/wiki/How-to-Use-Git-GUI-(Graphical-user-Interface)-in-Visual-Studios-Code)",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.c Working on an issue(3): Prepare your changes to push to your repository**"
+    },
+    {
+        "id": "42b26784-acbc-4014-9b03-14467de99c65",
+        "page_content": "This command prepares your changes before you commit them. You can stage files one at a time using the filename.  \nRun this command if you want to **add changes from a specific file(s) to your commit record**:\n```bash\ngit add \u201cfilename.ext\u201d\n```  \nRun this command if you want to **add all changes to all file(s) to your commit record**:\n```bash\ngit add .\n```",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.c Working on an issue(3): Prepare your changes to push to your repository**",
+        "header_5": "**i. Prepare repo changes (1): Use the `git add` command to stage your changes.**"
+    },
+    {
+        "id": "e83b7328-7629-4f46-adfe-f77ef8b8da82",
+        "page_content": "This command will list the files that have been staged.  These are the files that will be committed (saved) when you run the next command, `git commit`. Please be sure all your staged changes are relevant to the issue you are working on. If you accidentally included unrelated changes, please unstage them before making this commit, and then make a new commit for the unrelated changes. (The commands for unstaging commits are provided in the output of your `git status` command.)  \n```bash\ngit status\n```",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.c Working on an issue(3): Prepare your changes to push to your repository**",
+        "header_5": "**ii. Prepare repos changes (2): Use the `git status` command to see what files are staged.**"
+    },
+    {
+        "id": "4647e13a-212b-483a-8d9e-8a2dbdc4979a",
+        "page_content": "This command will remove a file that has been staged.  This file will not be committed (saved) when you run the next command, `git commit`. This only works if the wrong files were added, but they were not yet committed. The file will be removed from the staging area, but not actually deleted:  \n```bash\ngit reset HEAD \u201cfilename.ext\u201d\n```",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.c Working on an issue(3): Prepare your changes to push to your repository**",
+        "header_5": "**iii. Prepare repos changes (3): Use the `git reset HEAD` command to remove a staged file.**"
+    },
+    {
+        "id": "f728b906-f154-4c0f-840c-d58a8f7eb1ba",
+        "page_content": "This command saves your work, and prepares it to push to your repository.  Use the `-m` flag to quickly add a message to your commit. Your message should be a short description of the issue you are working.  It will be extremely helpful if other people can understand your message, so try to resist the temptation to be overly cryptic.  \nTo commit your changes with a message, run:  \n```bash\ngit commit -m \u201cinsert message here\u201d\n```  \n* If you do not see the changes you applied when you run `docker-compose up`, delete `_site` directory and `.jekyll-metadata` file and restart docker. This will force docker to rebuild the whole site.",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.c Working on an issue(3): Prepare your changes to push to your repository**",
+        "header_5": "**iv. Prepare repos changes (4): Use the `git commit` command**"
+    },
+    {
+        "id": "3ef62543-761f-4f53-b5c2-afe015593366",
+        "page_content": "**IMPORTANT:** Before you push your local commits to your repository, sync your fork to the main Hack For LA website repository. You can sync your fork directly on GitHub by clicking \"Sync Fork\" at the right of the screen and then clicking \"Update Branch\":  \n<details>\n<summary><strong>Click here</strong> to see how to sync the fork on GitHub</summary>\n<img src=\"https://raw.githubusercontent.com/wiki/hackforla/website/images/how-to-review-pull-requests/step3-sync-demo.gif\">\n</details>  \nNext, bring upstream changes into your topic branch. With your topic branch checked out, run:  \n```bash\ngit pull upstream gh-pages\n```",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.d Working on an issue (4): Pulling from upstream before you push**"
+    },
+    {
+        "id": "b894598e-9ce4-4ddf-b2b1-78980ad73207",
+        "page_content": "If you do not see any output, there have not been any changes in the main Hack for LA website repository since the last time you\nchecked. So it is safe to push your local commits to your fork.  \nIf you just type `git push` you will be prompted to create a new branch in your GitHub repository. The more complete command below will create a new branch on your copy of the website repository, and then push your local branch there. The name at the end of this command should be the same as the name of the local branch that you created back in step 3, as in the example below:  \n```bash\ngit push --set-upstream origin update-give-link-2093\n```",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.d Working on an issue (4): Pulling from upstream before you push**",
+        "header_5": "**i. If there are no changes in the upstream repository**"
+    },
+    {
+        "id": "96eb5c99-8fe4-43ed-8a40-a1c12ddbd0eb",
+        "page_content": "When you check the upstream repository, you may see output like this:  \n```bash\nFetching upstream\nremote: Enumerating objects: 11, done.\nremote: Counting objects: 100% (11/11), done.\nremote: Compressing objects: 100% (7/7), done.\nremote: Total 11 (delta 5), reused 7 (delta 4), pack-reused 0\nUnpacking objects: 100% (11/11), 8.25 KiB | 402.00 KiB/s, done.\nFrom https://github.com/hackforla/website\n+ 770d667...14f9f46 Bonnie     -> hackforla/Bonnie  (forced update)\n* [new branch]      bonnie     -> hackforla/bonnie\n5773ebe..0c86ecd  gh-pages   -> hackforla/gh-pages\n```  \n**Note:** You can safely ignore changes in other issue branches, such as `bonnie` above. But if you see changes in gh-pages, as in `5773ebe..0c86ecd  gh-pages   -> hackforla/gh-pages`, you should incorporate those changes into your repository before merging or rebasing your issue branch. Use the [instructions below](#27e-working-on-an-issue-5-incorporating-changes-from-upstream) to bring your fork up to date with the main repository.",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.d Working on an issue (4): Pulling from upstream before you push**",
+        "header_5": "**ii. If there are conflicting changes in the upstream repository**"
+    },
+    {
+        "id": "a3f373af-9813-499d-a7ed-12734757bdc5",
+        "page_content": "Your fork of this repository on GitHub, and your local clone of that fork, will get out of sync with this (upstream) repository from time to time. (That's what has happened when you see something like \"This branch is 1 commit behind hackforla:gh-pages\" on the github website version of your hackforla repository.)  \nOne way to keep your fork up to date with this repository is to follow these instruction: [Syncing your fork to the original repository via the browser](https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-repository-via-the-browser)  \nYou can also update your fork via the local clone of your fork, using these instructions. Assuming you have a local clone with remotes `upstream` (this repo) and `origin` (your GitHub fork of this repo):  \n* First, you will need to create a local branch which tracks upstream/gh-pages.  You will only need to do this once; you do not need to do this every time you want to incorporate upstream changes.  \nRun the following two commands:  \n```bash\ngit fetch upstream\ngit checkout -b upstream-gh-pages --track upstream/gh-pages\n```  \nIf you have already created the branch upstream-gh-pages, the following commands will incorporate upstream changes:  \n```bash\ngit checkout upstream-gh-pages # Move to the branch you want to merge with.\ngit pull  # This updates your tracking branch to match the gh-pages branch in this repository\ngit checkout gh-pages  # Move back to your gh-pages branch\ngit merge upstream-gh-pages  # Merge to bring your gh-pages current.\n```\nIf you do all your work on topic branches (as suggested above) and keep gh-pages free of local modifications, this merge should apply cleanly.  \nThen push the merge changes to your GitHub fork:  \n```bash\ngit push\n```  \nIf you go to your online github repository this should remove the message \"This branch is x commit behind hackforla:gh-pages\".",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.e Working on an issue (5): Incorporating changes from upstream**"
+    },
+    {
+        "id": "bb1d4f26-0725-45c3-a0a8-0be7bf8bf4fe",
+        "page_content": "To incorporate these updates from the main GitHub repository into your topic branch, you can 'rebase' your branch onto your updated gh-pages branch. NOTE you should only rebase if you have never pushed your topic branch to GitHub (or shared it with another collaborator).  \n```bash\ngit checkout update-give-link-2093\ngit rebase gh-pages\n```  \nIf you receive warnings about conflicts, abort the rebase with `git rebase --abort` and instead merge gh-pages into your branch.  \n```bash\ngit checkout update-give-link-2093\ngit merge gh-pages\n```",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.e Working on an issue (5): Incorporating changes from upstream**",
+        "header_5": "**i. Incorporating changes into your topic branch**"
+    },
+    {
+        "id": "462ffe2a-11fc-4f51-b733-04e3803c5836",
+        "page_content": "If you already have an SSH key that connects your computer with your GitHub account, you can skip this section (2.7.f).  \n**IMPORTANT:** If you are a Windows user then you have to install Git Bash, but if you are a Mac user you only need to use your terminal. Download Git Bash for Windows here:\n[Git Bash](https://git-scm.com/downloads)",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.f Working on an issue (6): Handling SSH authorization errors**"
+    },
+    {
+        "id": "47062c68-e9bf-40e5-94a2-685481c7fcfe",
+        "page_content": "1. You have to set up SSH keys in order to contribute to github remotely. First check if you have any keys set up already.  \n```bash\nls -al ~/.ssh\n```\nIf the folder ~/.ssh does not exist, create it using\n```bash\nmkdir ~/.ssh\n```  \n2. Then enter the text below into your terminal using your github account email address.  \n```bash\nssh-keygen -t rsa -b 4096 -C \"your_email@example.com\"\n```  \n3. You will be asked to enter a file to save the key, press enter, and then enter a passphrase. Then you will need to ensure that your machine and your repository are connected by running the ssh agent.  \n```bash\neval \"$(ssh-agent -s)\"\n```  \n4. Next you need to add your ssh key to your ssh agent.  In the command below, replace `id_ed25519` with the filename (without file extension) you provided in the previous step.  \n```bash\nssh-add -K ~/.ssh/id_ed25519\n```  \n5. Finally copy the ssh key to add it to your github account by entering the following command. This copies the contents of the id_ed25519.pub file to your clipboard __Don't copy anything else until after you finish the last step, or else you will have to repeat this step.__  \n```bash\npbcopy < ~/.ssh/id_ed25519.pub\n```  \n6. Go to your github accounts ssh key settings, and click on the button that says _New SSH key_. In the \"Title\" field, add a descriptive label for the new key. Paste the key into the form that pops up. Click Add SSH Key",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.f Working on an issue (6): Handling SSH authorization errors**",
+        "header_5": "**i. Setting up SSH Keys for Mac**"
+    },
+    {
+        "id": "7d9187f5-3414-4be8-b6ea-2e2877939be7",
+        "page_content": "1. You have to set up SSH keys in order to contribute to github remotely. First check if you have any keys set up already. Open Git Bash and run:  \n```bash\nls -al ~/.ssh\n```  \nIf the folder ~/.ssh does not exist, create it using  \n```bash\nmkdir ~/.ssh\n```  \n2. Then enter the text below into your terminal using your github account email address.  \n```bash\nssh-keygen -t rsa -b 4096 -C \"your_email@example.com\"\n```  \n3. You will be asked to enter a file to save the key, press enter, and then enter a passphrase. Then you will need to ensure that your machine and your repository are connected by running the ssh agent.  \n```bash\neval \"$(ssh-agent -s)\"\n```  \n4. Next you need to add your ssh key to your ssh agent. In the command below, replace `id_ed25519` with the filename (without file extension) you provided in the previous step.  \n```bash\nssh-add ~/.ssh/id_ed25519\n```  \n5. Finally copy the ssh key to add it to your github account by entering the following command. This copies the contents of the id_ed25519.pub file to your clipboard __Don't copy anything else until after you finish the last step, or else you will have to repeat this step.__  \n```bash\nclip < ~/.ssh/id_ed25519.pub\n```  \n6. Go to your github accounts ssh key settings, and click on the button that says _New SSH key_. In the \"Title\" field, add a descriptive label for the new key. Paste the key into the form that pops up. Click Add SSH Key  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 2: How the Website team works with GitHub issues**",
+        "header_3": "**2.7 Working on an issue**",
+        "header_4": "**2.7.f Working on an issue (6): Handling SSH authorization errors**",
+        "header_5": "**ii. Setting up SSH Keys for Windows**"
+    },
+    {
+        "id": "754c7042-6713-4883-a7f9-9a1228979a0e",
+        "page_content": "Once you are satisfied with your changes, push them to the feature branch you made within your remote repository.  \n```bash\ngit push --set-upstream origin update-give-link-2093\n```  \n**Note:** We will use the pull request [Update Care Link in Credits Page - #2131](https://github.com/hackforla/website/pull/2131) as an example. This is tied to issue [Update \u2018Give\u2019 image credit link and information - #2093](https://github.com/hackforla/website/issues/2093)",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 3: Pull Requests**",
+        "header_3": "**3.1 How to make a pull request**",
+        "header_4": "**3.1.a Push all changes to your issue branch**"
+    },
+    {
+        "id": "cf739d44-96c5-4554-aeba-fbf8a28a5d15",
+        "page_content": "<details>\n<summary><strong>Click here</strong> to see a notification for a pull request</summary>\n<img src=\"https://user-images.githubusercontent.com/21162229/137709888-77ccfd63-3921-4978-9fc0-6fbd703683b8.jpg\">\n</details>\n<br>\n<details>\n<summary><strong>Click here</strong> to see pull request markdown template</summary>  \n```\n<!--  Important! Add the number of the issue you worked on  -->\nFixes #replace_this_text_with_the_issue_number\n\n### What changes did you make?\n<!--  Note: add lines if needed, and remove any unused lines  -->\n-\n-\n-\n\n### Why did you make the changes (we will use this info to test)?\n<!--  Note: add lines if needed, and remove any unused lines  -->\n-\n-\n-\n\n### Screenshots of Proposed Changes To The Website (if any, please do not include screenshots of code changes)\n<!--  Notes:\n- If there are no visual changes to the website, delete all of the script below and replace with \"- No visual changes to the website\"\n- If there are visual changes to the website, include the 'before' and 'after' screenshots below.\n- If your images are too big, use the <img src=\"\" width=\"\" length=\"\" />  syntax instead of ![image](link) to format the images\n- If images are not loading properly, you might need to double check the syntax or add a newline after the closing </summary> tag\n-->\n\n<details>\n<summary>Visuals before changes are applied</summary>\n\n![image](Paste_Your_Image_Link_Here_After_Attaching_Files)\n\n</details>\n\n<details>\n<summary>Visuals after changes are applied</summary>\n\n![image](Paste_Your_Image_Link_Here_After_Attaching_Files)\n\n</details>\n```\n</details>\n<br>\n<details>\n<summary><strong>Click here</strong> to see pull request #2131 example (gif)</summary>\n<img src=\"https://media.giphy.com/media/WT7SDqqKLWnjC1ppHV/giphy-downsized-large.gif\">\n</details>\n<br>",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 3: Pull Requests**",
+        "header_3": "**3.1 How to make a pull request**",
+        "header_4": "**3.1.b Complete pull request on Hack for LA `website` repo**"
+    },
+    {
+        "id": "6c5f6c27-f075-43d3-8059-454a68820f3f",
+        "page_content": "* When the pull request is opened, the title input box will be the where the cursor defaults to.\n* The default title will be your last commit message from your branch.\n* Please change it to provide a summary of what you did.\n* For our example (PR [Update Care Link in Credits Page - #2131](https://github.com/hackforla/website/pull/2131)), [@adrian-zaragoza](https://github.com/adrian-zaragoza) provided the following title:  \n```\nUpdate Care Link in Credits Page\n```  \n**Advice:** Provide a 4-12 word summary of your resolution to the issue you are handling.",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 3: Pull Requests**",
+        "header_3": "**3.1 How to make a pull request**",
+        "header_4": "**3.1.b Complete pull request on Hack for LA `website` repo**",
+        "header_5": "**i. Complete pull request (1): Update pull request title**"
+    },
+    {
+        "id": "d1195610-fe98-486f-a24e-a358c197467d",
+        "page_content": "We have a GitHub action that automatically closes all issues connected to a pull request. So for our example (PR [Update Care Link in Credits Page - #2131](https://github.com/hackforla/website/pull/2131)) we need to make the following changes:  \n**From**\n```\nFixes #replace_this_text_with_the_issue_number\n```\n**To**\n```\nFixes #2093\n```  \n**Note:** This will now connect the issue and pull request both close when the pull request is successfully merged.",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 3: Pull Requests**",
+        "header_3": "**3.1 How to make a pull request**",
+        "header_4": "**3.1.b Complete pull request on Hack for LA `website` repo**",
+        "header_5": "**ii. Complete pull request (2): Add issue number to the pull request**"
+    },
+    {
+        "id": "a0235484-04f5-4db2-8fe1-5679fd0d9659",
+        "page_content": "In bullet point form, explain the changes you made in order to complete the action items within your issue and why. [@adrianang](https://github.com/adrianang) provided the following summary in PR [Add Project to Website: Tech Work Experience #4911](https://github.com/hackforla/website/pull/4911):  \n```\n### What changes did you make?\n- Created new markdown file for the Tech Work Experience Project (tech-work-experience.md)\n- Added assets (project card image, project hero image, PDF overview) to their appropriate folders\n\n### Why did you make the changes (we will use this info to test)?\n- To keep list of active HfLA projects on the website up-to-date\n\n```  \n**Note:** All the bullet points addressed the action items within that issue.",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 3: Pull Requests**",
+        "header_3": "**3.1 How to make a pull request**",
+        "header_4": "**3.1.b Complete pull request on Hack for LA `website` repo**",
+        "header_5": "**iii. Complete pull request (3): Explain the changes you made, then explain why these changes were needed**"
+    },
+    {
+        "id": "66206035-17c1-4b13-925b-a1020a80b6b2",
+        "page_content": "In the dropdown example above [**Click here** to see pull request #2131 example (gif)](#31-how-to-make-a-pull-request), you will see 2 images get dragged into the text box and added within the `<details>/<summary>` tags like so:  \n```\n### Screenshots of Proposed Changes Of The Website (if any, please do not include screenshots of code changes)\n<!--  Notes:\n- If there are no visual changes to the website, delete all of the script below and replace with \"- No visual changes to the website\"\n- If there are visual changes to the website, include the 'before' and 'after' screenshots below.\n- If your images are too big, use the <img src=\"\" width=\"\" length=\"\" />  syntax instead of ![image](link) to format the images\n- If images are not loading properly, you might need to double check the syntax or add a newline after the closing </summary> tag\n-->\n\n<details>\n<summary>Visuals before changes are applied</summary>\n\n![image](https://user-images.githubusercontent.com/77212035/130176122-aca18c1a-c883-48b3-987d-06342835017c.png)\n\n</details>\n\n<details>\n<summary>Visuals after changes are applied</summary>\n\n![image](https://user-images.githubusercontent.com/77212035/130176069-9c1cc306-f930-43a5-9f93-1249466c81dc.png)\n\n</details>\n```  \n**Note:** Not all pull requests will make visual changes to our website. **Please do not include screenshots from VSCode / other IDE**.  If your pull request does not make visual changes to our website, please remove the entire`<details>/<summary` section and replace it with a brief summary stating that there are no visual changes, for example:  \n```\n### Screenshots of Proposed Changes Of The Website  (if any, please do not screen shot code changes)\n\nMoving files to another directory. No visual changes to the website.\n```",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 3: Pull Requests**",
+        "header_3": "**3.1 How to make a pull request**",
+        "header_4": "**3.1.b Complete pull request on Hack for LA `website` repo**",
+        "header_5": "**iv. Complete pull request (4): Include images (if available)**"
+    },
+    {
+        "id": "11e8d000-64d5-4692-9870-57eaff53192a",
+        "page_content": "**NOTE**: There is an automation for adding newly created pull requests to the Project Board. However, it still should be manually checked to make sure the pull request has been placed on the Project Board in case automation breaks.  \nAfter you have submitted your pull request, add it to the project board by clicking the gear icon on the right under Projects and selecting 'Project Board.'  \n<details>\n<summary><strong>Click here</strong> to see how to add a pull request to the project board</summary>\n<h4>Our GitHub project board</h4>\n<img src=\"https://user-images.githubusercontent.com/81049661/161181526-23ae511c-e991-4cc6-a0a4-d8db19dd69ca.png\">\n</details>",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 3: Pull Requests**",
+        "header_3": "**3.1 How to make a pull request**",
+        "header_4": "**3.1.b Complete pull request on Hack for LA `website` repo**",
+        "header_5": "**v. Complete pull request (5): How to add a pull request to the project board**"
+    },
+    {
+        "id": "a494d648-688d-4419-a93d-1796ad1dc58d",
+        "page_content": "**NOTE**: After completing your assignment and committing all of the changes, you must leave your current branch and return to the `gh-pages` branch.  \nRun the following command to return to the `gh-pages` branch:  \n```bash\ngit checkout `gh-pages`\n```\nOnce your pull request is merged you can delete your branch with the following command:  \n```bash\ngit branch -d update-give-link-2093\n```  \nNow you are all set to work on a new PR. Start over at [**2.3 Where can I find GitHub issues to work on?**](#23-where-can-i-find-github-issues-to-work-on) and repeat completing parts 2 and 3.",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 3: Pull Requests**",
+        "header_3": "**3.1 How to make a pull request**",
+        "header_4": "**3.1.b Complete pull request on Hack for LA `website` repo**",
+        "header_5": "**vi. After pull request is submitted/merged**"
+    },
+    {
+        "id": "5a8904f1-78e4-4053-bb59-26e600c6966e",
+        "page_content": "If you find an error in your code or your reviewer asks you to make a change, please avoid editing your code directly from the pull request. Instead update it in your local branch first and then push it to your origin remote. This will update the original pull request.  \nFor new volunteers, check this [wiki on completing pull request reviews](https://github.com/hackforla/website/wiki/How-to-Review-Pull-Requests), [visual demo on pull request reviews](https://drive.google.com/file/d/1b6uW_Od8ftACsEr5u-nxe8qNb8UjkISN), and our [wiki on creating issues](https://github.com/hackforla/website/wiki/How-to-create-issues) for more ways to contribute to the project.",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 3: Pull Requests**",
+        "header_3": "**3.1 How to make a pull request**",
+        "header_4": "**3.1.c Editing a submitted pull request**"
+    },
+    {
+        "id": "dc86af62-f5ff-45cf-9dce-d4b46c9c474b",
+        "page_content": "Merge conflicts occur when two or more branches of code have been modified in conflicting ways, making it difficult for the version control system to automatically merge the changes together. This often happens when two developers modify the same line of code, when one developer deletes a file that another has modified, or when one developer renames a file while another is still working on it.  \nResolving merge conflicts typically involves reviewing the changes made in each branch, deciding which changes to keep, and manually editing the code to resolve the conflict.  \nPlease check out this [documentation from VSCode](https://code.visualstudio.com/docs/sourcecontrol/overview#_merge-conflicts) for more information on handling merge conflicts.  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 3: Pull Requests**",
+        "header_3": "**3.1 How to make a pull request**",
+        "header_4": "**3.1.d Dealing with merge conflicts**"
+    },
+    {
+        "id": "b8e03b85-f89b-45eb-a4b4-34da8fce25c2",
+        "page_content": "The best way to ask for help and provide as much information to the team is to do the following:  \n<details>\n<summary><strong>Click here</strong> for visual comment example</summary>\n<img src=\"https://user-images.githubusercontent.com/21162229/137784250-96281332-9231-4c5d-aba2-0d4c36521b82.jpg\" alt=\"Making a comment visual example\">\n</details>  \n1. Write down your blocker as a comment within your issue\n* Describe the blocker and your approach to resolve the action items within the issue.\n2. Note which branch you are working on and make sure it has the changes you are referring to.  \n<details>\n<summary><strong>Click here</strong> to see how to copy a link that goes to an issue comment</summary>\n<img src=\"https://user-images.githubusercontent.com/21162229/137784791-30871703-48de-4836-91ef-1268d86662a4.jpg\" alt=\"Visual example of how to copy the comment link\">\n</details>  \n1. Click on the ellipsis (...) at the top right of the comment box\n2. Click on `Copy Link`\n3. Now paste that link in the [`hfla-site` Slack channel](https://hackforla.slack.com/archives/C4UM52W93)\n4. The Website Leadership/Merge Team will do its best to help resolve any blockers and provide guidance.  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 4: Resources and Documentation**",
+        "header_3": "**4.1 What do I do if I need help?**"
+    },
+    {
+        "id": "e6e32d17-c2eb-478e-aa19-5ead653e150d",
+        "page_content": "* [Hack for LA's Wiki](https://github.com/hackforla/website/wiki)\n* [Wiki - Hack for LA's Site Architecture](https://github.com/hackforla/website/wiki/Hack-for-LA's-Site-Architecture)\n* [Wiki - Being a Part of the Hack For LA Team](https://github.com/hackforla/website/wiki/Being-a-Part-of-the-Hack-For-LA-Team)\n* [Wiki - How to review pull requests](https://github.com/hackforla/website/wiki/How-to-Review-Pull-Requests)\n* [Wiki - How to Create Issues](https://github.com/hackforla/website/wiki/How-to-create-issues)\n* [Wiki - How to read and interpret issue labels](https://github.com/hackforla/website/wiki/How-to-read-and-interpret-labels)\n* [Wiki - How to communicate with the HfLA Website Team](https://github.com/hackforla/website/wiki/How-to-communicate-with-the-team)\n* [Wiki - How to work off a feature branch](https://github.com/hackforla/website/wiki/How-to-work-off-of-a-feature-branch)\n* [Wiki - Resolving a merge conflict on GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github)",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 4: Resources and Documentation**",
+        "header_3": "**4.2 Resources and Documentation**",
+        "header_4": "**4.2.a Hack For LA resources**"
+    },
+    {
+        "id": "ae00f395-3da6-4329-b048-d34236f2f76e",
+        "page_content": "* [GitHub Pages](https://pages.github.com/)\n* [Jekyll Docs](https://jekyllrb.com/docs/)\n* [Liquid Documentation](https://shopify.github.io/liquid/)\n* [Github Guides](https://guides.github.com/)\n* [Docker](https://docs.docker.com/get-started/)\n- [Docker Compose](https://docs.docker.com/compose/gettingstarted/)\n- [Docker Desktop](https://docs.docker.com/install/)  \n***",
+        "header_1": "**How to Contribute to Hack for LA**",
+        "header_2": "**Part 4: Resources and Documentation**",
+        "header_3": "**4.2 Resources and Documentation**",
+        "header_4": "**4.2.b Tools Documentation**"
+    }
+]
