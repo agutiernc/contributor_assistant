@@ -3,7 +3,6 @@
 
 llm-project.code-workspace
 parse_markdown_contrib.py
-parse_markdown_to_json.ipynb
 parse_md.py
 testing_export_types.ipynb
 
