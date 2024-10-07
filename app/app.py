@@ -10,10 +10,8 @@ from db import (
     get_feedback_stats,
 )
 
-
 def print_log(message):
     print(message, flush=True)
-
 
 def main():
     print_log("Starting the Hack for LA Contributor Assistant app...")
@@ -23,123 +21,122 @@ def main():
     # Session state initialization
     if "conversation_id" not in st.session_state:
         st.session_state.conversation_id = str(uuid.uuid4())
-
-        print_log(
-            f"New conversation started with ID: {st.session_state.conversation_id}"
-        )
-
+    if "last_conversation_id" not in st.session_state:
+        st.session_state.last_conversation_id = None
     if "count" not in st.session_state:
         st.session_state.count = 0
+    if "feedback_given" not in st.session_state:
+        st.session_state.feedback_given = False
 
-        print_log("Feedback count initialized to 0")
+    print_log(f"Current conversation ID: {st.session_state.conversation_id}")
 
-    # Model selection
-    model_choice = st.selectbox(
+    # Model selection in the sidebar
+    model_choice = st.sidebar.selectbox(
         "Select a model:",
-        ["claude/3-5-sonnet, claude/3-haiku"],
+        ["claude/3-haiku", "claude/3-5-sonnet"],
     )
 
     print_log(f"User selected model: {model_choice}")
 
-    # User input
-    user_input = st.text_input("Enter your question:")
+    # Question input and answer display container
+    with st.container():
+        user_input = st.chat_input("Enter your question:")
 
-    if st.button("Ask"):
-        print_log(f"User asked: '{user_input}'")
+        if user_input:
+            print_log(f"User asked: '{user_input}'")
 
-        with st.spinner("Processing..."):
-            print_log(
-                f"Getting answer from assistant using {model_choice} model..."
-            )
+            with st.spinner("Processing..."):
+                print_log(f"Getting answer from assistant using {model_choice} model...")
 
-            start_time = time.time()
-            answer_data = get_answer(user_input, model_choice)
-            end_time = time.time()
+                start_time = time.time()
+                answer_data = get_answer(user_input, model_choice)
+                end_time = time.time()
 
-            print_log(f"Answer received in {end_time - start_time:.2f} seconds")
+                print_log(f"Answer received in {end_time - start_time:.2f} seconds")
 
-            st.success("Completed!")
-            st.write(answer_data["answer"])
+                st.success("Completed!")
+                st.write(answer_data["answer"])
 
-            # Display monitoring information
-            st.write(f"Response time: {answer_data['response_time']:.2f} seconds")
-            st.write(f"Relevance: {answer_data['relevance']}")
-            st.write(f"Model used: {answer_data['model_used']}")
-            st.write(f"Total tokens: {answer_data['total_tokens']}")
+                # Display monitoring information
+                st.write(f"Response time: {answer_data['response_time']:.2f} seconds")
+                st.write(f"Relevance: {answer_data['relevance']}")
+                st.write(f"Model used: {answer_data['model_used']}")
+                st.write(f"Total tokens: {answer_data['total_tokens']}")
 
-            if answer_data["claude_cost"] > 0:
-                st.write(f"Claude AI cost: ${answer_data['claude_cost']:.4f}")
+                if answer_data["claude_cost"] > 0:
+                    st.write(f"Claude AI cost: ${answer_data['claude_cost']:.4f}")
 
-            # Save conversation to database
-            print_log("Saving conversation to database")
+                # Save conversation to database
+                print_log("Saving conversation to database")
 
-            save_conversation(
-                st.session_state.conversation_id, user_input, answer_data
-            )
+                save_conversation(st.session_state.conversation_id, user_input, answer_data)
+                
+                print_log("Conversation saved successfully")
 
-            print_log("Conversation saved successfully")
+                # Store the last used conversation_id and generate a new one for the next question
+                st.session_state.last_conversation_id = st.session_state.conversation_id
+                st.session_state.conversation_id = str(uuid.uuid4())
+                st.session_state.feedback_given = False
 
-            # Generate a new conversation ID for next question
-            st.session_state.conversation_id = str(uuid.uuid4())
-
-    # Feedback buttons
+    # Feedback buttons in columns
     col1, col2 = st.columns(2)
 
     with col1:
-        if st.button("+1"):
-            st.session_state.count += 1
+        if st.button("+1") and not st.session_state.feedback_given:
+            if st.session_state.last_conversation_id:
+                st.session_state.count += 1
 
-            print_log(
-                f"Positive feedback received. New count: {st.session_state.count}"
-            )
+                print_log(f"Positive feedback received. New count: {st.session_state.count}")
+                
+                save_feedback(st.session_state.last_conversation_id, 1)
+                
+                print_log("Positive feedback saved to database")
+                
+                st.session_state.feedback_given = True
+            else:
+                st.warning("Please ask a question before providing feedback.")
 
-            save_feedback(st.session_state.conversation_id, 1)
-
-            print_log("Positive feedback saved to database")
     with col2:
-        if st.button("-1"):
-            st.session_state.count -= 1
+        if st.button("-1") and not st.session_state.feedback_given:
+            if st.session_state.last_conversation_id:
+                st.session_state.count -= 1
 
-            print_log(
-                f"Negative feedback received. New count: {st.session_state.count}"
-            )
-
-            save_feedback(st.session_state.conversation_id, -1)
-
-            print_log("Negative feedback saved to database")
+                print_log(f"Negative feedback received. New count: {st.session_state.count}")
+                
+                save_feedback(st.session_state.last_conversation_id, -1)
+                
+                print_log("Negative feedback saved to database")
+                
+                st.session_state.feedback_given = True
+            else:
+                st.warning("Please ask a question before providing feedback.")
 
     st.write(f"Current count: {st.session_state.count}")
 
-    # Display recent conversations
-    st.subheader("Recent Conversations")
+    # Recent conversations expander
+    with st.expander("Recent Conversations"):
+        relevance_filter = st.selectbox(
+            "Filter by relevance:", ["All", "RELEVANT", "PARTLY_RELEVANT", "NON_RELEVANT"]
+        )
 
-    relevance_filter = st.selectbox(
-        "Filter by relevance:", ["All", "RELEVANT", "PARTLY_RELEVANT", "NON_RELEVANT"]
-    )
+        recent_conversations = get_recent_conversations(
+            limit=5, relevance=relevance_filter if relevance_filter != "All" else None
+        )
 
-    recent_conversations = get_recent_conversations(
-        limit=5, relevance=relevance_filter if relevance_filter != "All" else None
-    )
+        for conv in recent_conversations:
+            st.write(f"Q: {conv['question']}")
+            st.write(f"A: {conv['answer']}")
+            st.write(f"Relevance: {conv['relevance']}")
+            st.write(f"Model: {conv['model_used']}")
+            st.write("---")
 
-    for conv in recent_conversations:
-        st.write(f"Q: {conv['question']}")
-        st.write(f"A: {conv['answer']}")
-        st.write(f"Relevance: {conv['relevance']}")
-        st.write(f"Model: {conv['model_used']}")
-        st.write("---")
-
-    # Display feedback stats
-    feedback_stats = get_feedback_stats()
-
-    st.subheader("Feedback Statistics")
-    st.write(f"Thumbs up: {feedback_stats['thumbs_up']}")
-    st.write(f"Thumbs down: {feedback_stats['thumbs_down']}")
-
-
-print_log("Streamlit app loop completed")
-
+    # Feedback statistics expander
+    with st.expander("Feedback Statistics"):
+        feedback_stats = get_feedback_stats()
+        
+        st.write(f"Thumbs up: {feedback_stats['thumbs_up']}")
+        st.write(f"Thumbs down: {feedback_stats['thumbs_down']}")
 
 if __name__ == "__main__":
     print_log("Hack for LA Contributor Assistant app started...")
-
     main()

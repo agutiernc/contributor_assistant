@@ -16,13 +16,13 @@ claude_client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 model = SentenceTransformer("multi-qa-MiniLM-L6-cos-v1")
 
 
-# Apply Reciprocal Rank Fusion (RRF) to combine and rerank search results
 def compute_rrf(rank, k=60):
     """ Own implementation of the relevance score """
-    
     return 1 / (k + rank)
 
 def elastic_search_hybrid_rrf(field, query, vector, k=60, index_name="contributing_h4la"):
+    """Apply Reciprocal Rank Fusion (RRF) to combine and rerank search results."""
+
     knn_query = {
         "knn": {
             "field": field,
@@ -75,7 +75,6 @@ def elastic_search_hybrid_rrf(field, query, vector, k=60, index_name="contributi
         
         final_results.append(doc['_source'])
 
-
     return final_results
 
 
@@ -84,6 +83,7 @@ def build_prompt(query, search_results):
     You're an assistant to an open source software engineering project on github. Answer the QUESTION based on
     the CONTEXT from our contributor FAQ database.
     Use only the facts and relevant hyperlinks, if any, from the CONTEXT when answering the QUESTION.
+    Refrain from saying "based on context provided".
 
     QUESTION: {question}
 
@@ -122,9 +122,9 @@ def llm(prompt, model_choice):
         answer = response.content[0].text
 
         tokens = {
-            'prompt_tokens': response.usage.prompt_tokens,
-            'completion_tokens': response.usage.completion_tokens,
-            'total_tokens': response.usage.total_tokens
+            'prompt_tokens': response.usage.input_tokens,
+            'completion_tokens': response.usage.output_tokens,
+            'total_tokens': response.usage.input_tokens + response.usage.output_tokens
         }
     else:
         raise ValueError(f"Unknown model choice: {model_choice}")
@@ -176,8 +176,8 @@ def calculate_claude_pricing(prompt_tokens, completion_tokens,
     Args:
     - prompt_tokens (int): The number of tokens in the prompt.
     - completion_tokens (int): The number of tokens in the completion.
-    - price_per_1m_prompt_tokens (float): Price per 1 million prompt tokens (default = $0.150).
-    - price_per_1m_completion_tokens (float): Price per 1 million completion tokens (default = $0.600).
+    - price_per_1m_prompt_tokens (float): Price per 1 million prompt tokens (default = $0.25).
+    - price_per_1m_completion_tokens (float): Price per 1 million completion tokens (default = $1.25).
 
     Returns:
     - total_cost (float): The total cost of the API usage.

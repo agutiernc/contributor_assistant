@@ -1,4 +1,10 @@
 streamlit
-pandas
-elasticsearch=8.15.1
+elasticsearch==8.15.1
 anthropic
+psycopg2-binary==2.9.9
+python-dotenv
+sentence-transformers
+numpy==1.26.4
+
+--find-links https://download.pytorch.org/whl/cpu/torch_stable.html
+torch==2.4.1
