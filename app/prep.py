@@ -103,7 +103,6 @@ def index_documents(es_client, documents, model):
 
 
 def main():
-    # if you just want to init the db or didn't want to re-index
     print("Starting the indexing process...")
 
     documents = fetch_documents()

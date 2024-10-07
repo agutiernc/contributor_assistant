@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 import uuid
+import matplotlib.pyplot as plt
 
 from assistant import get_answer
 from db import (
@@ -133,9 +134,58 @@ def main():
     # Feedback statistics expander
     with st.expander("Feedback Statistics"):
         feedback_stats = get_feedback_stats()
-        
+
         st.write(f"Thumbs up: {feedback_stats['thumbs_up']}")
         st.write(f"Thumbs down: {feedback_stats['thumbs_down']}")
+
+
+    # Pie charts for relevance and user voting
+    with st.expander("View Pie Charts for LLM Responses"):
+        # Fetch relevance data from recent conversations
+        relevance_data = get_recent_conversations(limit=100)
+        relevance_count = {'RELEVANT': 0, 'PARTLY_RELEVANT': 0, 'NON_RELEVANT': 0}
+
+        # Count how many responses fall into each relevance category
+        for conv in relevance_data:
+            if conv['relevance'] == 'RELEVANT':
+                relevance_count['RELEVANT'] += 1
+            elif conv['relevance'] == 'PARTLY_RELEVANT':
+                relevance_count['PARTLY_RELEVANT'] += 1
+            elif conv['relevance'] == 'NON_RELEVANT':
+                relevance_count['NON_RELEVANT'] += 1
+                
+        # Create labels and sizes for all categories
+        relevance_labels = [label.replace('_', ' ').title() for label in relevance_count.keys()]
+        relevance_sizes = list(relevance_count.values())
+        
+        # Fetch feedback stats (voting data)
+        feedback_stats = get_feedback_stats()
+        voting_labels = ['Helpful', 'Not Helpful']
+        voting_sizes = [feedback_stats['thumbs_up'], feedback_stats['thumbs_down']]
+        
+        # Create two pie charts side by side
+        col1, col2 = st.columns(2)
+        
+        # Pie chart for relevance
+        with col1:
+            fig1, ax1 = plt.subplots()
+
+            ax1.pie(relevance_sizes, labels=None, autopct='%1.1f%%', startangle=90)
+            ax1.axis('equal')  # Equal aspect ratio ensures the pie is drawn as a circle
+            
+            # Add a legend to the pie chart with all categories
+            ax1.legend(relevance_labels, title="Relevance", loc="center left", bbox_to_anchor=(1, 0, 0.5, 1))
+            
+            st.pyplot(fig1)
+        
+        # Pie chart for user voting
+        with col2:
+            fig2, ax2 = plt.subplots()
+
+            ax2.pie(voting_sizes, labels=voting_labels, autopct='%1.1f%%', startangle=90)
+            ax2.axis('equal')  # Equal aspect ratio ensures the pie is drawn as a circle.
+            
+            st.pyplot(fig2)
 
 if __name__ == "__main__":
     print_log("Hack for LA Contributor Assistant app started...")

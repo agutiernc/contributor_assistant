@@ -83,7 +83,7 @@ def build_prompt(query, search_results):
     You're an assistant to an open source software engineering project on github. Answer the QUESTION based on
     the CONTEXT from our contributor FAQ database.
     Use only the facts and relevant hyperlinks, if any, from the CONTEXT when answering the QUESTION.
-    Refrain from saying "based on context provided".
+    Refrain from referring to the documentation as "context". Instead, refer to it as the "contributing guidelines".
 
     QUESTION: {question}
 
