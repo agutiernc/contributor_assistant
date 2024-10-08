@@ -183,9 +183,9 @@ This rigorous testing process demonstrates our commitment to creating a high-per
 
 ### Stage 2: Running the Chatbot App
 
-<p align="center">
-   <img src="./images/chatbot-app.png" width="50%" alt="Chatbot UI App">
-</p>
+<img src="./images/chatbot-app.png" width="50%" alt="Chatbot UI App">
+
+<br />
 
 After replicating the project, follow these steps to set up and run the Streamlit app:
 
@@ -260,6 +260,7 @@ The chatbot's performance is monitored using two key metrics, visualized through
    <img src="./images/votes.png" width="38%" alt="Query Helpfulness">
 </p>
 These visualizations are crucial for:
+
 - Identifying areas for improvement
 - Tracking the chatbot's performance over time
 - Ensuring the chatbot meets user needs effectively
