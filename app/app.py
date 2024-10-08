@@ -169,8 +169,18 @@ def main():
         # Pie chart for relevance
         with col1:
             fig1, ax1 = plt.subplots()
+            colors = ["yellow", "aqua", "pink"]
 
-            ax1.pie(relevance_sizes, labels=None, autopct='%1.1f%%', startangle=90)
+            ax1.pie(
+                relevance_sizes,
+                labels=None,
+                autopct='%1.1f%%',
+                startangle=90,
+                labeldistance=1.5,
+                shadow="true",
+                colors=colors,
+                pctdistance=0.8
+            )
             ax1.axis('equal')  # Equal aspect ratio ensures the pie is drawn as a circle
             
             # Add a legend to the pie chart with all categories
@@ -181,10 +191,18 @@ def main():
         # Pie chart for user voting
         with col2:
             fig2, ax2 = plt.subplots()
+            colors = ["dodgerblue", "lime"]
 
-            ax2.pie(voting_sizes, labels=voting_labels, autopct='%1.1f%%', startangle=90)
+            ax2.pie(
+                voting_sizes, 
+                labels=voting_labels, 
+                autopct='%1.1f%%', 
+                startangle=90, 
+                shadow="true", 
+                colors=colors
+            )
             ax2.axis('equal')  # Equal aspect ratio ensures the pie is drawn as a circle.
-            
+
             st.pyplot(fig2)
 
 if __name__ == "__main__":
