@@ -273,4 +273,4 @@ By monitoring these metrics, we can continuously refine the chatbot's responses 
 
 ---
 
-Thanks to [DataTalk's Club LLM Zoomcamp](Zoomcamp) for their excellent course and for giving me the knowledge on LLM/RAG.
+Thanks to [DataTalk's Club LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp) for their excellent course and for giving me the knowledge on LLM/RAG.
