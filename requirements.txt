@@ -11,3 +11,5 @@ scikit-learn
 sentence-transformers
 elasticsearch==8.15.1
 tqdm
+python-dotenv
+psycopg2-binary==2.9.9
