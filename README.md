@@ -1,7 +1,7 @@
 # Hack for LA Contributor Assistant
 
 <p align="center">
-   <img src="./images/chat-ai-bot.jpeg" width="38%" alt="AI Robot interacting with programmer">
+   <img src="./images/chat-ai-bot.jpeg" width="46%" alt="AI Robot interacting with programmer">
 </p>
 
 The [Hack for LA](https://www.hackforla.org) Contributor Assistant is an innovative chatbot designed to streamline the process of contributing to Hack for LA's open source projects. This AI-powered tool serves as a conversational interface, providing quick and accurate answers to questions about the contribution process.
