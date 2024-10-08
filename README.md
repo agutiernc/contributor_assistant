@@ -1,5 +1,9 @@
 # Hack for LA Contributor Assistant
 
+<p align="center">
+   <img src="./images/chat-ai-bot.jpeg" width="38%" alt="AI Robot interacting with programmer">
+</p>
+
 The [Hack for LA](https://www.hackforla.org) Contributor Assistant is an innovative chatbot designed to streamline the process of contributing to Hack for LA's open source projects. This AI-powered tool serves as a conversational interface, providing quick and accurate answers to questions about the contribution process.
 
 ## Project Overview  🚀
@@ -65,50 +69,37 @@ This carefully selected stack combines powerful tools and libraries to create a 
 
 ## Instructions to Replicate the Project 🧭
 
-1. Clone me:
+Clone the repo and switch to the project directory:
    ```
     git clone https://github.com/agutiernc/contributor_assistant
-   ```
 
-2. Switch to project directory
-
+    cd contributor_assistant
    ```
-   cd contributor_assistant
-   ```
-
 
 ### Stage 1: Data Preparation and Testing (Optional)
 
 This stage is optional, but provides insight into the data preparation and testing process. Skip to Stage 2 to run the Streamlit app.
 
-**Note:** This step will generate the files that are located in the `data` directory, except for `CONTRIBUTING.md`. You can delete those files if you plan to run the Jupyter Notebooks.
+**Note:** This step will generate the files that are located in the `data` directory, except for `CONTRIBUTING.md`. You can delete or rename those files if you plan to run the Jupyter Notebooks.
 
 #### Environment Setup
 
-1. Create a Python virtual environment in your terminal:
+1. Create a Python virtual environment in your terminal, activate it, and install dependencies:
 
    ```
    python -m venv venv
-   ```
-
-2. Activate the virtual environment:
-
-   ```
+   
    source venv/bin/activate
-   ```
 
-3. Install dependencies:
-
-   ```
    pip install -r requirements.txt
    ```
 
-4. Add your Anthropic Claude API Key to your terminal:
+2. Add your Anthropic Claude API Key to your terminal:
    ```
    export ANTHROPIC_API_KEY="your_api_key"
    ```
 
-    **Note:** An Anthropic API Key is required. Get one from [here](https://www.anthropic.com/api). ([Pricing](https://www.anthropic.com/pricing#anthropic-api))
+    **Note:** An Anthropic API Key is required. Get one from [Anthropic](https://www.anthropic.com/api). ([Pricing](https://www.anthropic.com/pricing#anthropic-api)) -- Total API cost when developing this project was $2.60.
 
 
 ### Parsing and Chunking the Data Source
@@ -128,7 +119,7 @@ This stage is optional, but provides insight into the data preparation and testi
    - To run an individual cell: Select the cell and press `Ctrl + Enter`, or click the "Run" button in the toolbar.
 
 This notebook performs the following tasks:
-- Parses the `contributing.md` file from the `data` directory
+- Parses the `CONTRIBUTING.md` file from the `data` directory
 - Uses LangChain's *MarkdownHeaderTextSplitter* to divide the content into manageable chunks
 - Outputs the processed data as a *JSON* file for further use in the pipeline
 
@@ -192,6 +183,10 @@ This rigorous testing process demonstrates our commitment to creating a high-per
 
 ### Stage 2: Running the Chatbot App
 
+<p align="center">
+   <img src="./images/chatbot-app.png" width="50%" alt="Chatbot UI App">
+</p>
+
 After replicating the project, follow these steps to set up and run the Streamlit app:
 
 ### Prerequisites
@@ -249,7 +244,7 @@ You should now see the chatbot app loaded and ready to use.
 
 ---
 
-### Monitoring and Evaluation
+### Monitoring and Evaluation 📊
 
 The chatbot's performance is monitored using two key metrics, visualized through pie charts:
 
@@ -260,10 +255,10 @@ The chatbot's performance is monitored using two key metrics, visualized through
    The second chart shows the proportion of queries deemed helpful or not helpful. This metric directly measures the chatbot's effectiveness in assisting users.
 
 
-
-<img src="./images/relevance.png" width="50%" alt="Query Relevance">
-<img src="./images/votes.png" width="38%" alt="Query Helpfulness">
-
+<p align="center">
+   <img src="./images/relevance.png" width="50%" alt="Query Relevance">
+   <img src="./images/votes.png" width="38%" alt="Query Helpfulness">
+</p>
 These visualizations are crucial for:
 - Identifying areas for improvement
 - Tracking the chatbot's performance over time
@@ -273,4 +268,6 @@ By monitoring these metrics, we can continuously refine the chatbot's responses 
 
 ---
 
-Thanks to [DataTalk's Club LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp) for their excellent course and for giving me the knowledge on LLM/RAG.
+Thanks to [Data Talk's Club LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp) for their excellent course.
+
+And a big thanks to [Hack for LA](https://www.hackforla.org).
