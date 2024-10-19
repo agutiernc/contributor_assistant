@@ -147,8 +147,8 @@ This ground truth dataset enables us to assess and enhance the chatbot's accurac
 
 This crucial file develops and tests our LLM RAG system:
 
-  - Vector Embeddings: We create these using SentenceTransformer and ElasticSearch. Think of them as numerical representations of text that capture semantic meaning, allowing for efficient similarity searches.
-  - Hybrid Search: We implement multiple approaches, including one using LangChain's ElasticsearchRetriever. Hybrid search combines traditional keyword search with vector similarity search, aiming for more accurate and contextually relevant results.
+  - **Vector Embeddings:** We create these using SentenceTransformer and ElasticSearch. Think of them as numerical representations of text that capture semantic meaning, allowing for efficient similarity searches.
+  - **Hybrid Search:** We implement multiple approaches, including one using LangChain's `ElasticsearchRetriever`. *Hybrid search* combines traditional keyword search with vector similarity search, aiming for more accurate and contextually relevant results.
 
 Key steps involved:
 1. Index and embed documents from `documents.json`
@@ -187,10 +187,11 @@ This rigorous testing process demonstrates our commitment to creating a high-per
 
 <br />
 
-After replicating the project, follow these steps to set up and run the Streamlit app:
+Follow these steps to set up and run the Streamlit chatbot app:
 
 ### Prerequisites
 - Ensure Docker is installed on your system.
+- An Anthropic API Key (As mentioned in Stage 1)
 
 ### Setup Steps
 1. Open a new terminal tab and navigate to the app directory:
@@ -207,14 +208,16 @@ After replicating the project, follow these steps to set up and run the Streamli
    - Rename `.env-doc` to `.env`
    - Add your information to the environment variables in `.env`
 
-3. Run the Docker container:
+3. Build and Run the Docker container:
    ```
+   docker compose build
+
    docker compose up
    ```
 
 4. Switch back to the first terminal tab (where you ran Jupyter Notebook).
 
-5. Change to the `app` directory and run the preparation script:
+5. Change to the `app` directory and run the preparation / ***ingestion*** script:
    ```
    cd app
 
