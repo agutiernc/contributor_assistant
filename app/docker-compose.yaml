@@ -11,11 +11,18 @@ services:
       - "9300:9300"
     volumes:
       - elasticsearch_data:/usr/share/elasticsearch/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9200"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
 
   postgres:
     image: postgres:13
     container_name: postgres
     environment:
+      POSTGRES_HOST: ${POSTGRES_HOST:-postgres}
       POSTGRES_DB: ${POSTGRES_DB}
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -41,9 +48,17 @@ services:
     ports:
       - "${STREAMLIT_PORT:-8501}:8501"
     depends_on:
-      - elasticsearch
-      - postgres
+      elasticsearch:
+        condition: service_healthy
+      postgres:
+        condition: service_started
+    # depends_on:
+    #   - elasticsearch
+    #   - postgres
+    volumes:
+      - app_data:/app
 
 volumes:
   elasticsearch_data:
   postgres_data:
+  app_data:

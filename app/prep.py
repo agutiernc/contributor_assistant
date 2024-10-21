@@ -9,7 +9,9 @@ from db import init_db
 
 load_dotenv()
 
-ELASTIC_URL = os.getenv("ELASTIC_URL_LOCAL")
+# ELASTIC_URL = os.getenv("ELASTIC_URL_LOCAL")
+ELASTIC_URL = os.getenv("ELASTIC_URL")
+
 MODEL_NAME = os.getenv("MODEL_NAME")
 INDEX_NAME = os.getenv("INDEX_NAME")
 
