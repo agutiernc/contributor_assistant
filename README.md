@@ -56,7 +56,7 @@ Our Hack for LA Contributor Assistant leverages a robust and modern technology s
 
 - **Streamlit:** Creates an intuitive and interactive web interface for users to engage with the assistant.
 
-- **sentence-transformers:** Generates high-quality vector embeddings from text, capturing semantic meaning for improved search accuracy.
+- **sentence-transformers:** Generates high-quality vector embeddings from text, capturing semantic meaning for improved search accuracy. Model [`multi-qa-MiniLM-L6-cos-v1`](https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1) is used.
 
 - **pandas:** Facilitates data manipulation and analysis for generating insights.
 
@@ -190,18 +190,14 @@ This rigorous testing process demonstrates our commitment to creating a high-per
 Follow these steps to set up and run the Streamlit chatbot app:
 
 ### Prerequisites
-- Ensure Docker is installed on your system.
-- An Anthropic API Key (As mentioned in Stage 1)
+- Clone the github repo -- as stated above
+- Ensure Docker is installed on your system
+- An Anthropic API Key -- as mentioned in Stage 1
 
 ### Setup Steps
 1. Open a new terminal tab and navigate to the app directory:
    ```
    cd app
-   ```
-
-1. If needed, set the Postgres host:
-   ```
-   export POSTGRES_HOST=localhost
    ```
 
 2. Prepare the environment file:
@@ -210,40 +206,62 @@ Follow these steps to set up and run the Streamlit chatbot app:
 
 3. Build and Run the Docker container:
    ```
-   docker compose build
-
-   docker compose up
+   docker compose up --build
    ```
 
-4. Switch back to the first terminal tab (where you ran Jupyter Notebook).
-
-5. Change to the `app` directory and run the preparation / ***ingestion*** script:
+   *Note:* If a Postgres or Elasticsearch connection error occurs, try setting the Postgres host:
    ```
-   cd app
-
-   python prep.py
+   export POSTGRES_HOST=localhost
    ```
 
-   This script will:
-   - Fetch relevant documents from the `data` directory
-   - Set up Elasticsearch and index the documents
-   - Configure PostgreSQL tables using the `db.py` database config script
+   **Docker Initialization Process**
 
-6. (Optional) Verify the database setup:
+   When the docker command is ran, the following automated setup occurs:
+   - Package Installation: Installs required Python dependencies
+   - Initialization Script `entrypoint.sh`: Verifies Elasticsearch availability and triggers `prep.py` once Elasticsearch is ready
+   - Data preparation with `prep.py`:
+     - Fetches `documents.json` and `ground-truth-retrieval.csv` from the `data` directory
+     - Configures and indexes the documents in Elasticsearch
+     - Calls `db.py` to setup the PostgreSQL database
+
+4. Launch the chatbot app:
+   - Open your web browser and go to `http://localhost:8501`
+
+   You should now see the chatbot app loaded and ready to use.
+
+5. (Optional) Verify the database setup:
+
+   To access the database while the Docker container is running:
+      1. Open a new terminal window/tab
+      2. Run the following command:
+   
+   ```
+   docker exec -it postgres psql -U h4la -d contributor_assistant
+   ```
+
+   If the command doesn't work:
+   - Run `docker ps` to list all running containers
+   - Look for the container with `postgres` in its name
+   - Use either:
+     - The `container_id` (e.g., 3f4ab2c1d9e8)
+     - The `container_name` for postgres
+  
+   ``` 
+   docker exec -it [container_id/name] psql -U h4la -d contributor_assistant
+   ```
+
+   Once connected, you can run:
+     - `\d conversations;` to see the schema
+     - `\dt;` to list all tables
+     - `SELECT * FROM conversations;` or `SELECT * FROM feedback;` to view table contents
+
+   If you prefer to use **pgcli** and have it installed in your system or a python virtual environment, try this:
+
    ```
    pgcli -h localhost -U your_username -d contributor_assistant -W
    ```
    - Replace `your_username` with the value you used for `POSTGRES_USER` in `.env`.
    - Use the `POSTGRES_PASSWORD` from your `.env` file when prompted
-   - Once connected, you can run:
-     - `\d conversations;` to see the schema
-     - `\dt;` to list all tables
-     - `SELECT * FROM conversations;` or `SELECT * FROM feedback;` to view table contents
-
-7. Launch the chatbot app:
-   - Open your web browser and go to `http://localhost:8501`
-
-You should now see the chatbot app loaded and ready to use.
 
 ---
 
