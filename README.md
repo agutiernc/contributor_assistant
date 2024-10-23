@@ -183,7 +183,7 @@ This rigorous testing process demonstrates our commitment to creating a high-per
 
 ### Stage 2: Running the Chatbot App
 
-<img src="./images/chatbot-app.png" width="50%" alt="Chatbot UI App">
+<img src="./images/chatbot-app.png" width="55%" alt="Chatbot UI App">
 
 <br />
 
